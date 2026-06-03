@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+
+<html lang="ru"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>БакиБар — Марципан: Элегантность и Энергия</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600&amp;family=Playfair+Display:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "champagne": "#F5F2ED",
+                        "charcoal": "#1A1A1A",
+                        "gold": "#C5A059",
+                        "gold-muted": "#D9CDB8",
+                        "surface": "#FFFFFF",
+                        "primary": "#1A1A1A",
+                        "secondary": "#C5A059",
+                        "background": "#F5F2ED",
+                        "on-background": "#1A1A1A",
+                        "outline": "#D1CDC7"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0px",
+                        "lg": "0px",
+                        "xl": "0px",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "24px",
+                        "container-max": "1440px",
+                        "stack-md": "64px",
+                        "stack-lg": "120px",
+                        "gutter": "32px",
+                        "margin-desktop": "80px"
+                    },
+                    "fontFamily": {
+                        "display": ["Playfair Display", "serif"],
+                        "body": ["Manrope", "sans-serif"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Manrope', sans-serif; background-color: #F5F2ED; color: #1A1A1A; }
+        h1, h2, h3, .font-serif { font-family: 'Playfair Display', serif; }
+        .strikethrough-gold { position: relative; display: inline-block; }
+        .strikethrough-gold::after {
+            content: '';
+            position: absolute;
+            bottom: 0.2em;
+            left: -5%;
+            width: 110%;
+            height: 1px;
+            background-color: #C5A059;
+            transform: rotate(-1deg);
+        }
+        .editorial-shadow { box-shadow: 20px 20px 60px rgba(0,0,0,0.05); }
+    </style>
+</head>
+<body class="antialiased selection:bg-gold selection:text-white">
+<!-- Header -->
+<header class="w-full border-b border-outline/30 bg-champagne/80 backdrop-blur-md sticky top-0 z-50">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-6 flex justify-between items-center">
+<a aria-label="БакиБар" class="text-3xl font-display font-bold tracking-tight text-charcoal" href="index.html">БакиБар</a>
+<nav class="hidden lg:flex items-center gap-10">
+<a class="text-[11px] uppercase tracking-[0.2em] font-semibold hover:text-gold transition-colors" href="index.html">Главная</a>
+<a class="text-[11px] uppercase tracking-[0.2em] font-semibold hover:text-gold transition-colors border-b border-gold" href="catalog.html">Каталог</a>
+<a class="text-[11px] uppercase tracking-[0.2em] font-semibold hover:text-gold transition-colors" href="about.html">О бренде</a>
+<a class="text-[11px] uppercase tracking-[0.2em] font-semibold hover:text-gold transition-colors" href="b2b.html">B2B</a>
+<a class="text-[11px] uppercase tracking-[0.2em] font-semibold hover:text-gold transition-colors" href="where-to-buy.html">Где купить</a>
+</nav>
+<button class="lg:hidden text-charcoal">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</header>
+<main class="relative">
+<!-- Hero Section: Editorial Elegance -->
+<section class="min-h-screen flex flex-col lg:flex-row relative overflow-hidden">
+<!-- Left Side: Content & Image Overlap -->
+<div class="lg:w-3/5 flex flex-col justify-center px-margin-mobile md:px-margin-desktop py-stack-lg z-20">
+<div class="max-w-2xl">
+<span class="inline-block text-gold font-semibold tracking-[0.3em] uppercase text-[10px] mb-8 italic">Коллекция «Интеллект и Спокойствие»</span>
+<h1 class="text-5xl md:text-7xl font-display leading-[1.1] mb-10 text-charcoal">
+                    Марципан: Искусство <span class="italic">умного</span> перекуса.
+                </h1>
+<div class="flex flex-col md:flex-row gap-12 items-start">
+<div class="flex-1">
+<p class="text-lg leading-relaxed text-charcoal/80 mb-8 font-light">
+                            Мы создали не просто батончик, а ритуал ясности. В мире, который никогда не замолкает, Марципан БакиБар становится вашим тихим союзником. Это топливо для нейронов, облеченное в форму десерта.
+                        </p>
+<div class="flex gap-6 items-center">
+<a class="bg-charcoal text-white px-10 py-5 text-[12px] uppercase tracking-widest hover:bg-gold transition-all duration-500" href="b2b.html">Условия сотрудничества</a>
+<div class="h-[1px] w-12 bg-gold"></div>
+</div>
+</div>
+<!-- Overlapping Packaging Image -->
+<div class="relative w-48 md:w-64 -mt-12 lg:-mt-24 self-center lg:self-start">
+<img alt="Батончик Марципан" class="w-full transform hover:rotate-2 transition-transform duration-700 drop-shadow-2xl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCaMKDG1mWCvRDkq_jffGWByTm7tUZA98j9Emr4F_E9ZMrdNVQ_3lQvUfsAXIEoI-ieAo-jcg9ZTGkW6hA4Dacq_O4vwmqpYZqkK_PmnGwFha5TBHQPGQDMN-pqlZlVAab3o3JS4TD6JkRpMNjefoQADbgmSnFug87oAA4YH-t2ZL3Sv5k7w812PZyI1gKKQpD0Fg_DKmYZjZ1qN-3KxwYqutAXT0P8icAYFDQxU-jXa24xbDZ2K6mdnvgs3XClmV7ZeJ0P11ybjqVY"/>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Side: Full Bleed Ingredients Image -->
+<div class="lg:w-2/5 relative h-[50vh] lg:h-auto order-first lg:order-last">
+<img alt="Ингредиенты" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLs4dDi2NkwCUkpKe94TNP4TcbszmX5JM1I6nvX1XqiunvaHhOcKt_hWFLcWxZ3kMrP3laEd2WNyfUS24HpDFYPXB7UTmfk_IDbIY7eu6X7I74ughPaBEmOpIwPKygD4eH4Gmo8S85C1hGkog1rrz-86d8OJeDhpdEyejdL6kjmaII73bCROUursUAVnCV0HRYeqfagrxZROIgoERwkSmU7fCBdUZLZG04Nzh_ra3TFcLF3E-fWOObgHwNQo"/>
+<div class="absolute inset-0 bg-charcoal/5 mix-blend-multiply"></div>
+<div class="absolute bottom-12 left-12 right-12 text-white">
+<p class="font-display italic text-2xl">«Чистота состава — это наша религия.»</p>
+</div>
+</div>
+</section>
+<!-- Storytelling Section -->
+<section class="py-stack-lg bg-surface">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+<div class="lg:col-span-5">
+<h2 class="text-4xl font-display mb-8 text-charcoal">Почему Марципан?</h2>
+<div class="space-y-12">
+<div>
+<h3 class="text-gold font-display text-xl italic mb-3">Снижение уровня кортизола</h3>
+<p class="text-charcoal/70 leading-relaxed font-light">Миндальная мука в основе — это природный источник магния. Она мягко стабилизирует нервную систему, помогая вам сохранять фокус даже в эпицентре дедлайна.</p>
+</div>
+<div>
+<h3 class="text-gold font-display text-xl italic mb-3">Энергия без «сахарных качелей»</h3>
+<p class="text-charcoal/70 leading-relaxed font-light">Сложные углеводы инжира и папайи обеспечивают постепенное высвобождение глюкозы. Ваш мозг получает ровный поток энергии в течение нескольких часов.</p>
+</div>
+</div>
+</div>
+<div class="lg:col-span-6 lg:offset-1 mt-12 lg:mt-0">
+<div class="aspect-[4/5] bg-champagne relative overflow-hidden p-12 border border-outline/20">
+<div class="h-full flex flex-col justify-center border-l border-gold pl-12">
+<span class="material-symbols-outlined text-5xl text-gold mb-6">psychiatry</span>
+<p class="text-2xl font-display leading-snug text-charcoal italic mb-8">
+                                "Фенилэтиламин в какао-масле стимулирует центры удовольствия, создавая ощущение легкой эйфории — то, что нужно для творческого прорыва."
+                            </p>
+<span class="text-[10px] uppercase tracking-widest font-bold opacity-40">— Научный подход к вкусу</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Detailed Composition: Asymmetric Grid -->
+<section class="py-stack-lg">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+<!-- Ingredients -->
+<div class="bg-surface p-12 editorial-shadow">
+<h3 class="text-[11px] uppercase tracking-[0.3em] font-bold text-gold mb-12">Архитектура вкуса</h3>
+<ul class="space-y-8">
+<li class="flex flex-col gap-1">
+<span class="font-display text-lg text-charcoal">Миндальная мука</span>
+<span class="text-xs text-charcoal/50 uppercase tracking-wider">Основа и антистресс</span>
+</li>
+<li class="flex flex-col gap-1 border-t border-outline/30 pt-6">
+<span class="font-display text-lg text-charcoal">Горький шоколад</span>
+<span class="text-xs text-charcoal/50 uppercase tracking-wider">0% сахара</span>
+</li>
+<li class="flex flex-col gap-1 border-t border-outline/30 pt-6">
+<span class="font-display text-lg text-charcoal">Инжир и папайя</span>
+<span class="text-xs text-charcoal/50 uppercase tracking-wider">Интеллектуальное топливо</span>
+</li>
+<li class="flex flex-col gap-1 border-t border-outline/30 pt-6">
+<span class="font-display text-lg text-charcoal">Какао масло</span>
+<span class="text-xs text-charcoal/50 uppercase tracking-wider">Текстура и радость</span>
+</li>
+</ul>
+</div>
+<!-- Nutrition -->
+<div class="lg:col-span-2 bg-charcoal text-champagne p-12 relative overflow-hidden">
+<div class="relative z-10">
+<h3 class="text-[11px] uppercase tracking-[0.3em] font-bold text-gold mb-16">Нутриентный профиль <span class="opacity-40 ml-4">/ 45г</span></h3>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<div class="border-l border-gold/30 pl-6">
+<span class="block text-4xl font-display mb-2">7г</span>
+<span class="text-xs uppercase tracking-widest opacity-60">Белки</span>
+</div>
+<div class="border-l border-gold/30 pl-6">
+<span class="block text-4xl font-display mb-2">15г</span>
+<span class="text-xs uppercase tracking-widest opacity-60">Жиры</span>
+</div>
+<div class="border-l border-gold/30 pl-6">
+<span class="block text-4xl font-display mb-2">18г</span>
+<span class="text-xs uppercase tracking-widest opacity-60">Углеводы</span>
+</div>
+</div>
+<div class="mt-20 pt-10 border-t border-gold/20 flex justify-between items-end">
+<div>
+<span class="text-xs uppercase tracking-widest opacity-60 block mb-2">Энергетическая ценность</span>
+<span class="text-5xl font-display text-gold">229 ккал</span>
+</div>
+<span class="text-[10px] uppercase tracking-widest opacity-40">Срок годности: 90 дней</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-charcoal text-champagne py-24 border-t border-gold/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+<div class="lg:col-span-4">
+<a class="text-4xl font-display font-bold block mb-6" href="index.html">БакиБар</a>
+<p class="text-champagne/40 text-sm max-w-xs leading-relaxed">Создаем продукты, которые уважают ваше тело и ваш интеллект. Сделано с любовью к качеству и вниманием к деталям.</p>
+</div>
+<div class="lg:col-span-4 lg:col-start-6">
+<h4 class="text-xs uppercase tracking-[0.3em] text-gold mb-8">Свяжитесь с нами</h4>
+<div class="space-y-4">
+<a class="block font-display text-2xl hover:text-gold transition-colors" href="tel:+79264500383">+7 926 450 03 83</a>
+<a class="block font-light opacity-70 hover:opacity-100 transition-opacity" href="mailto:bakibar@bk.ru">bakibar@bk.ru</a>
+</div>
+</div>
+<div class="lg:col-span-2 lg:col-start-11">
+<h4 class="text-xs uppercase tracking-[0.3em] text-gold mb-8">Сообщество</h4>
+<a class="block font-light opacity-70 hover:opacity-100 transition-opacity" href="https://instagram.com/bakibar_" target="_blank">Instagram @bakibar_</a>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mt-24 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between text-[10px] uppercase tracking-widest opacity-30">
+<p>© 2026 BAKIBAR. ALL RIGHTS RESERVED.</p>
+<p>MODERN NUTRITION ARTISTRY</p>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,293 @@
+<!DOCTYPE html><html class="dark" lang="ru"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Домашний Атлетизм | BakiBar</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&amp;family=Manrope:wght@400;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-tint": "#e9c349",
+                    "on-tertiary-fixed": "#1c1b1b",
+                    "on-primary-fixed": "#241a00",
+                    "on-secondary": "#3f2c23",
+                    "primary": "#f2ca50",
+                    "tertiary-container": "#b4b2b2",
+                    "primary-fixed-dim": "#e9c349",
+                    "on-surface": "#e5e2e1",
+                    "inverse-surface": "#e5e2e1",
+                    "on-primary-container": "#554300",
+                    "inverse-on-surface": "#313030",
+                    "primary-container": "#d4af37",
+                    "tertiary-fixed": "#e5e2e1",
+                    "surface-dim": "#131313",
+                    "surface-container-lowest": "#0e0e0e",
+                    "surface-container-highest": "#353534",
+                    "on-tertiary-fixed-variant": "#474746",
+                    "surface-container-low": "#1c1b1b",
+                    "secondary-fixed": "#fbdcce",
+                    "outline-variant": "#4d4635",
+                    "on-tertiary": "#313030",
+                    "outline": "#99907c",
+                    "on-background": "#e5e2e1",
+                    "on-tertiary-container": "#454544",
+                    "on-secondary-container": "#cbafa2",
+                    "secondary": "#dec1b3",
+                    "error": "#ffb4ab",
+                    "background": "#131313",
+                    "on-secondary-fixed-variant": "#574238",
+                    "secondary-fixed-dim": "#dec1b3",
+                    "on-error-container": "#ffdad6",
+                    "on-primary-fixed-variant": "#574500",
+                    "on-error": "#690005",
+                    "on-secondary-fixed": "#281810",
+                    "surface": "#131313",
+                    "on-primary": "#3c2f00",
+                    "on-surface-variant": "#d0c5af",
+                    "surface-container-high": "#2a2a2a",
+                    "tertiary": "#d0cdcd",
+                    "surface-container": "#201f1f",
+                    "primary-fixed": "#ffe088",
+                    "surface-variant": "#353534",
+                    "secondary-container": "#574238",
+                    "error-container": "#93000a",
+                    "surface-bright": "#3a3939",
+                    "tertiary-fixed-dim": "#c8c6c5",
+                    "inverse-primary": "#735c00"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "stack-sm": "16px",
+                    "stack-md": "32px",
+                    "base": "8px",
+                    "section-padding": "120px",
+                    "container-max": "1280px",
+                    "stack-lg": "64px",
+                    "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                    "headline-md": ["Playfair Display"],
+                    "body-md": ["Manrope"],
+                    "body-lg": ["Manrope"],
+                    "button": ["Manrope"],
+                    "display-lg-mobile": ["Playfair Display"],
+                    "display-lg": ["Playfair Display"],
+                    "label-caps": ["Manrope"]
+            },
+            "fontSize": {
+                    "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0.01em", "fontWeight": "400"}],
+                    "button": ["14px", {"lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "display-lg-mobile": ["40px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.15em", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        body { background-color: #0F0F0F; color: #e5e2e1; }
+        .hero-mask {
+            mask-image: linear-gradient(to right, black 70%, transparent 100%);
+        }
+        .carpet-pattern {
+            background-image: radial-gradient(circle at 2px 2px, rgba(115, 92, 0, 0.15) 1px, transparent 0);
+            background-size: 24px 24px;
+        }
+    </style>
+</head>
+<body class="font-body-md selection:bg-primary selection:text-on-primary-container">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-gutter max-w-container-max mx-auto h-20 bg-surface/80 dark:bg-surface/80 backdrop-blur-md border-b border-outline-variant/20">
+<a class="font-display-lg text-headline-md text-primary dark:text-primary tracking-tighter" href="index.html">БакиБар</a>
+<nav class="hidden md:flex gap-stack-md">
+<a class="font-button text-button uppercase text-on-surface dark:text-on-surface hover:text-primary transition-colors cursor-pointer" href="index.html">Главная</a>
+<a class="font-button text-button uppercase text-primary dark:text-primary border-b-2 border-primary pb-1 transition-all cursor-pointer" href="catalog.html">Каталог</a>
+<a class="font-button text-button uppercase text-on-surface dark:text-on-surface hover:text-primary transition-colors cursor-pointer" href="about.html">О бренде</a>
+<a class="font-button text-button uppercase text-on-surface dark:text-on-surface hover:text-primary transition-colors cursor-pointer" href="b2b.html">B2B/ИНВЕСТОРАМ</a>
+<a class="font-button text-button uppercase text-on-surface dark:text-on-surface hover:text-primary transition-colors cursor-pointer" href="sex.html">Секс</a>
+<a class="font-button text-button uppercase text-on-surface dark:text-on-surface hover:text-primary transition-colors cursor-pointer" href="contacts.html">Контакты</a>
+</nav>
+<div class="flex items-center gap-stack-sm">
+<span class="material-symbols-outlined text-primary cursor-pointer">shopping_bag</span>
+<span class="material-symbols-outlined text-primary md:hidden cursor-pointer">menu</span>
+</div>
+</header>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative min-h-[90vh] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Hero Image" class="w-full h-full object-cover object-center opacity-60 hero-mask" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAU22yCGwCr1HoCB3NdEs3hBQpM6tuI0uae0DpVf1R9UfZHkXDEeeS3xJpCDeDbqtQph6BTdldAo5Bla8m8S5Uo1e8vLbdQgr7ejZRNLTkO9FkwuyjpzJv7fTrEnomihNe4-UGz7UoMbpDvS70ngPW3-xD1teH5J7Md6c014WT-qWhODz1Z92FVye2Sf7Pjg7zGCzULps-L1PZXrza9WRVDpvw6wMPOgN4dCENwGmE2wZIqDPrBZFVZIMMia7BpU4irBkT9BVZnoLAX">
+<div class="absolute inset-0 bg-gradient-to-r from-background via-background/40 to-transparent"></div>
+</div>
+<div class="container-max mx-auto px-margin-mobile md:px-gutter relative z-10 grid grid-cols-12 gap-gutter">
+<div class="col-span-12 md:col-span-7 lg:col-span-6 flex flex-col justify-center gap-stack-md">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 w-fit">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-caps text-label-caps text-primary uppercase">ДОМАШНЕЕ ВОССТАНОВЛЕНИЕ</span>
+</div>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-background leading-tight">Домашний Атлетизм</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg">
+                        Мост между наследием и здоровьем. Традиционное чаепитие у самовара встречается с современными требованиями к спортивному восстановлению и биохакингу.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-stack-sm mt-stack-sm">
+<a href="where-to-buy.html" class="px-stack-lg py-4 bg-primary text-on-primary-fixed font-button text-button uppercase hover:bg-primary-fixed-dim transition-all active:opacity-80 inline-block">
+                            Купить BakiBar
+                        </a>
+<a href="about.html" class="px-stack-lg py-4 border border-primary text-primary font-button text-button uppercase hover:bg-primary/5 transition-all active:opacity-80 inline-block">
+                            Наша история
+                        </a>
+</div>
+</div>
+</div>
+</section>
+<!-- Product Highlight (Asymmetric Bento) -->
+<section class="py-section-padding bg-surface-dim relative overflow-hidden carpet-pattern">
+<div class="container-max mx-auto px-margin-mobile md:px-gutter">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-stack-lg items-center">
+<!-- Left: Text & Values -->
+<div class="md:col-span-5 order-2 md:order-1 flex flex-col gap-stack-md">
+<div class="space-y-4">
+<h2 class="font-headline-md text-headline-md text-primary">Эстетика Макадамии</h2>
+<p class="font-body-md text-body-md text-on-surface-variant italic">
+                                «За каждым достижением стоит момент глубокого покоя».
+                            </p>
+<div class="h-px w-20 bg-primary/30"></div>
+</div>
+<div class="grid gap-stack-sm">
+<div class="p-stack-sm border border-outline-variant/20 bg-surface-container-low/50 backdrop-blur-sm">
+<span class="font-label-caps text-label-caps text-primary uppercase block mb-1">ДОМАШНЕЕ ВОССТАНОВЛЕНИЕ</span>
+<p class="text-on-surface">Цельные орехи макадамии для когнитивного здоровья и долголетия.</p>
+</div>
+<div class="p-stack-sm border border-outline-variant/20 bg-surface-container-low/50 backdrop-blur-sm">
+<span class="font-label-caps text-label-caps text-primary uppercase block mb-1">ДОМАШНЕЕ ВОССТАНОВЛЕНИЕ</span>
+<p class="text-on-surface">Вкус, пробуждающий родовую память в контексте современного атлетизма.</p>
+</div>
+<div class="p-stack-sm border border-outline-variant/20 bg-surface-container-low/50 backdrop-blur-sm">
+<span class="font-label-caps text-label-caps text-primary uppercase block mb-1">ДОМАШНЕЕ ВОССТАНОВЛЕНИЕ</span>
+<p class="text-on-surface">Без сахара, без компромиссов. Только то, что делает тебя сильнее.</p>
+</div>
+</div>
+</div>
+<!-- Right: Product Hero -->
+<div class="md:col-span-7 order-1 md:order-2 relative flex justify-center items-center h-[500px] md:h-[700px]">
+<!-- Decorative element: Blurred red circle for carpet feel -->
+<div class="absolute w-[400px] h-[400px] bg-[#93000a]/20 rounded-full blur-[100px] -z-10"></div>
+<div class="relative group cursor-pointer transition-transform duration-700 hover:scale-105">
+<img alt="BakiBar Packaging" class="h-[450px] md:h-[600px] w-auto drop-shadow-[0_35px_35px_rgba(0,0,0,0.6)]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-I0Bwh7WIOCy69UBlL733zrU1RifgvHpG0-h5JzeNZTdU1GfEqcfB4ryqGPvtJmNymhoL6BHj3ZEy_AUJ0wpcRHvsSL5eA5ZMTlDscWUwZOJGBf97f6Tzlp45OmvhSzWYlt4J-mjRTRO906ccpJDFXq1mBPAH6_P7yec6X6ijDo7S97RR9HodRQc5KJFdDNrLQn9OthXHVUXlWSD_z6x_bBe74brB92ZNB25r2CNGJMq3y7mtm2g1M4DqRDcJ9uQG7chznc0c8gHC">
+<!-- Detail Zoom Effect Simulation -->
+<div class="absolute -top-10 -right-10 w-32 h-32 rounded-full border border-primary/20 bg-surface-container-highest/30 backdrop-blur-md flex items-center justify-center p-4 text-center">
+<p class="font-label-caps text-[10px] text-primary uppercase leading-tight">Макадамия &amp; Традиции</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Recovery Philosophy Section -->
+<section class="py-section-padding border-t border-outline-variant/10">
+<div class="container-max mx-auto px-margin-mobile md:px-gutter">
+<div class="max-w-3xl mx-auto text-center flex flex-col gap-stack-md mb-stack-lg">
+<h2 class="font-display-lg text-headline-md md:text-display-lg text-on-background">Ритуал силы</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                        Домашний атлетизм — это не только изнурительные тренировки, но и искусство восстановления. Мы верим, что уют и традиция являются катализаторами физического и ментального прогресса.
+                    </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="aspect-[4/5] relative overflow-hidden group">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Close up of a traditional Russian samovar emitting soft steam in a dimly lit, luxury interior. Warm golden highlights on the polished brass surface. Mood is quiet, contemplative, and premium." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkg6Nln9sM12oWs5n5ao_QtCTe8wrRot-Um_4fciZjsJLhksVhl7Bp7bnQUm4ZjH0j_Bq0qlWjF3Q1icrOyTa6KFmCJ2agwe89z5eUi6cGp3ps1tKsb_eCXr59fVQ1WXAMRkf03C4yTlIwYf_GM_iUECQ8cGLxBxkiGEHDY4F8YuU3ncnYNmXN6HkmIpV85FvKBhU__sJHmsRoIgrjvRXSaCywmAFkqIij5Rf5pc0UQ4-HyaK__B4STdbRZXP7IhBx_aAp3R8dvhIA">
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-80"></div>
+<div class="absolute bottom-stack-md left-stack-md">
+<h3 class="font-headline-md text-headline-md text-primary">Тепло</h3>
+<p class="font-body-md text-on-surface">Энергия огня и воды</p>
+</div>
+</div>
+<div class="aspect-[4/5] relative overflow-hidden group mt-stack-md md:mt-stack-lg">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Macro photography of premium macadamia nuts on a dark, textured ceramic plate. Moody studio lighting, soft shadows, and deep earthy tones. High-end lifestyle health aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-PaibopGQ_-15kAJgPEEM_ed2YgPp4JcElGXhuwYoi1J8YinAw3CM07LNrFun5onmnoP0jBhzW47t4rn-SF2eG4RqW01D2D4vgeG0JwxBFSO6zXIijCf2jNTNb-zEtP82ekTPJPEx9vmLnmtKIgg1Ug6B36C2MFyXKhd8-YaWQPWeJA4-liBat5Y16yN2QG1KOoPzCIFYtT-LiDjLWqY96PsjAx9eVutOJ4lDCpN3I-Num9kSCLBf4B-mLRvm3a8MHueSiHK-JEfo">
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-80"></div>
+<div class="absolute bottom-stack-md left-stack-md">
+<h3 class="font-headline-md text-headline-md text-primary">Нутриенты</h3>
+<p class="font-body-md text-on-surface">Топливо для клеток</p>
+</div>
+</div>
+<div class="aspect-[4/5] relative overflow-hidden group">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Detail of high-performance athletic wear next to a cup of dark tea and a traditional carpet. Contrast between modern technical materials and classic heritage textures. Luxury dark mode photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBP9XSa8rPIduxErd1ShfjKvoXKK58uDPvCBe1MTUezieqzz_y6fYqGk-J_ol9WnBbmRhu6yYDKBk1SEPT1Zvys4J3aIiodfCmFr97Otd-Lf7UG2g9LkA8kFZ3jQeTwv6oePssrR5URmvkstOVwn-JKAq6wkXomJNuc_8aqcnka9XEP0rZ3MVLsP9w3X0JR0Yv0uNFrAYs_GavjTySUQ0DSRs2t8yEsX4JG3oPT-pN4EwVM0iOB-JeKIPs1LjrKFHprgVkyfCK4LmjG">
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-80"></div>
+<div class="absolute bottom-stack-md left-stack-md">
+<h3 class="font-headline-md text-headline-md text-primary">Баланс</h3>
+<p class="font-body-md text-on-surface">Гармония старого и нового</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA / Footer Split -->
+<section class="bg-surface-container-lowest py-section-padding px-margin-mobile">
+<div class="max-w-2xl mx-auto border border-primary/20 p-stack-lg text-center relative overflow-hidden">
+<div class="absolute top-0 right-0 p-4 opacity-10">
+<span class="material-symbols-outlined text-[120px] text-primary">health_metrics</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-primary mb-4">Начни свое восстановление</h2>
+<p class="text-on-surface-variant mb-stack-md">Попробуйте BakiBar с Макадамией — ваш новый стандарт домашнего атлетизма.</p>
+<div class="flex justify-center gap-stack-sm">
+<input class="bg-transparent border-0 border-b border-primary/40 focus:ring-0 focus:border-primary text-on-surface placeholder:text-on-surface-variant/40 w-64" placeholder="Email для спецпредложений" type="email">
+<button class="p-3 bg-primary text-on-primary-fixed rounded-full hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-section-padding px-margin-mobile md:px-gutter max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-start gap-stack-md border-t border-outline-variant/10 bg-surface-container-lowest dark:bg-surface-container-lowest">
+<div class="flex flex-col gap-stack-sm">
+<div class="font-display-lg text-headline-md text-primary dark:text-primary">БакиБар</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xs">© 2026 БакиБар. Все права защищены. Тёмная роскошь здоровья.</p>
+</div>
+<div class="grid grid-cols-2 md:flex md:gap-stack-lg gap-stack-md">
+<div class="flex flex-col gap-2">
+<span class="font-label-caps text-label-caps text-primary uppercase">ПРОДУКТ</span>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Политика конфиденциальности</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Публичная оферта</a>
+</div>
+<div class="flex flex-col gap-2">
+<span class="font-label-caps text-label-caps text-primary uppercase">СЕРВИС</span>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Доставка и оплата</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="contacts.html">Контакты</a>
+</div>
+</div>
+</footer>
+<script>
+        // Simple scroll effect for header
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('h-16');
+                header.classList.remove('h-20');
+            } else {
+                header.classList.add('h-20');
+                header.classList.remove('h-16');
+            }
+        });
+    </script>
+
+
+</body></html>

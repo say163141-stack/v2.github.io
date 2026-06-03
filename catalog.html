@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="ru"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>БакиБар - Eco-Premium Каталог</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;family=Manrope:wght@300;400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary": "#8fa37a", // Muted Forest Green
+                        "secondary": "#a67c52", // Earthy Bronze
+                        "background": "#0d110b", // Deepest Forest
+                        "surface": "#1a1f16", // Soft Dark Moss
+                        "surface-variant": "#242b1f",
+                        "on-surface": "#e2e8e0",
+                        "on-surface-variant": "#b0baa9",
+                        "outline": "#4a5441",
+                        "primary-fixed-dim": "#8fa37a",
+                        "on-primary": "#131a0d"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "2rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "stack-md": "48px",
+                        "margin-mobile": "20px",
+                        "container-max": "1280px",
+                        "stack-lg": "96px",
+                        "margin-desktop": "64px"
+                    },
+                    "fontFamily": {
+                        "display": ["Playfair Display", "serif"],
+                        "body": ["Manrope", "sans-serif"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Manrope', sans-serif; }
+        h1, h2, h3, .font-serif { font-family: 'Playfair Display', serif; }
+        
+        .organic-shape {
+            border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+        }
+        
+        @media (prefers-reduced-motion: no-preference) {
+            .scroll-reveal {
+                opacity: 0;
+                transform: translateY(30px);
+                transition: opacity 1.2s cubic-bezier(0.22, 1, 0.36, 1), transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+            }
+            .scroll-reveal.is-visible {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            .hover-lift {
+                transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+            }
+            .hover-lift:hover {
+                transform: translateY(-8px);
+                box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+            }
+        }
+
+        .nav-link { position: relative; }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            bottom: -2px;
+            left: 0;
+            background-color: theme('colors.secondary');
+            transform: scaleX(0);
+            transform-origin: bottom right;
+            transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .nav-link:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+
+        .gradient-overlay {
+            background: linear-gradient(to top, rgba(13, 17, 11, 1) 0%, rgba(13, 17, 11, 0.4) 50%, transparent 100%);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface antialiased">
+<!-- Navigation (Consistent with SCREEN_94) -->
+<nav class="bg-background/95 backdrop-blur-md border-b border-white/5 sticky top-0 z-50">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-5 max-w-container-max mx-auto">
+<a class="text-primary font-bold font-serif text-xl tracking-tight" href="index.html">БАКИБАР</a>
+<!-- Desktop Nav -->
+<ul class="hidden md:flex gap-8 items-center">
+<li><a class="nav-link text-on-surface-variant hover:text-primary transition-colors text-xs uppercase tracking-[0.2em]" href="index.html">Главная</a></li>
+<li><a aria-current="page" class="text-secondary font-bold text-xs uppercase tracking-[0.2em] border-b border-secondary pb-0.5" href="catalog.html">Каталог</a></li>
+<li><a class="nav-link text-on-surface-variant hover:text-primary transition-colors text-xs uppercase tracking-[0.2em]" href="about.html">О бренде</a></li>
+<li><a class="nav-link text-on-surface-variant hover:text-primary transition-colors text-xs uppercase tracking-[0.2em]" href="b2b.html">B2B/Инвесторам</a></li>
+<li><a class="nav-link text-on-surface-variant hover:text-primary transition-colors text-xs uppercase tracking-[0.2em]" href="sex.html">Секс</a></li>
+<li><a class="nav-link text-on-surface-variant hover:text-primary transition-colors text-xs uppercase tracking-[0.2em]" href="where-to-buy.html">Где купить</a></li>
+<li><a class="nav-link text-on-surface-variant hover:text-primary transition-colors text-xs uppercase tracking-[0.2em]" href="contacts.html">Контакты</a></li>
+</ul>
+<!-- Mobile Menu Button -->
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative h-[70vh] min-h-[500px] flex items-center justify-center overflow-hidden">
+<img alt="Natural ingredients background" class="absolute inset-0 w-full h-full object-cover opacity-40 scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-1wMiy50Pypj5_QOXvARRt7ydZfZIcMx8Hk0pm9NtQcoaoPtJa1E6jkV4COdOXTPpMN6f6Qa6o3xgTzUsETMyJCmPEBdTbwQPNT48EAZu5ReoYe5ublXa8PH2vGmejaDny3EAz7s-0hFWd4z19ySw6Ok43dXUmDVKaLMgdtrzOtBUO11M0dKBPw_l23Stzr7jIzjbUu4YNwawyaRTm57hhYZ126G-xzQlt5AQoaczPrHO-sBFIFgRIzdkUKBGqV9_OpeG2cTji5-J"/>
+<div class="absolute inset-0 gradient-overlay"></div>
+<div class="relative z-10 text-center px-margin-mobile max-w-4xl mx-auto scroll-reveal is-visible">
+<span class="inline-block px-4 py-1 border border-primary/30 rounded-full text-primary text-[10px] uppercase tracking-[0.3em] mb-6 backdrop-blur-sm bg-primary/5">Крафтовое производство • Самара</span>
+<h1 class="text-5xl md:text-7xl text-on-surface mb-6 font-serif leading-[1.1]">Первозданная энергия природы</h1>
+<p class="text-lg md:text-xl text-on-surface-variant max-w-2xl mx-auto font-light leading-relaxed">Синергия четырех рецептов, созданных из цельных ингредиентов для тех, кто ценит чистоту состава и глубину вкуса.</p>
+</div>
+</section>
+<!-- Ingredient Integration Section -->
+<section class="py-stack-lg bg-surface/30">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center mb-stack-lg scroll-reveal">
+<div class="relative">
+<div class="organic-shape bg-primary/10 absolute -inset-4 rotate-12 -z-10"></div>
+<img alt="Dates and Walnuts" class="rounded-xl shadow-2xl w-full h-[400px] object-cover border border-white/5" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEA-7LegWCHcwTTOp11G1aLDl4zQpp2T4qcd23awfvxn9D1YeLFI6SmXVC-CHXz7jvdLwWlwvCctcBqrN1B22gkWs8x89Z4K31emfCBo5aoIyM6dMK7w3DKbgk91vX6xzh11Mq1FN_0Nc5PFHa8mxHoK8r8WFCSc2DEEtymPuP82pM0CWmvKyFPixd8WzJbyUQFmkDVkHM2tJKtGhAQ8EvTPDnbEDC3-Rc4zK-SKd6-qYzZcF-yv21lWxFOVIdvcukzYVwdIdBh_qp"/>
+<div class="absolute -bottom-6 -right-6 bg-secondary p-8 rounded-lg shadow-xl hidden lg:block">
+<p class="text-on-primary font-serif italic text-lg italic">"Только то, что дала природа"</p>
+</div>
+</div>
+<div class="space-y-6">
+<h2 class="text-4xl md:text-5xl font-serif text-secondary">Живая сила Самарской Луки</h2>
+<p class="text-on-surface-variant leading-relaxed text-lg">Каждый батончик БакиБар рождается в нашей крафтовой мастерской в Самаре. Мы вручную отбираем лучшие орехи макадамии, иранские фисташки и сочные финики, чтобы сохранить каждую каплю природной пользы.</p>
+<ul class="space-y-4">
+<li class="flex items-center gap-3 text-primary">
+<span class="material-symbols-outlined">check_circle</span>
+<span class="text-on-surface font-medium">Без рафинированного сахара и консервантов</span>
+</li>
+<li class="flex items-center gap-3 text-primary">
+<span class="material-symbols-outlined">check_circle</span>
+<span class="text-on-surface font-medium">Малые партии для максимальной свежести</span>
+</li>
+</ul>
+</div>
+</div>
+<!-- Catalog Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- Card 1: Макадамия -->
+<div class="group hover-lift bg-surface-variant/40 rounded-xl overflow-hidden border border-white/5 flex flex-col h-full scroll-reveal">
+<div class="aspect-[4/5] w-full relative p-8 flex items-center justify-center overflow-hidden bg-[#161d12]">
+<img alt="Макадамия" class="object-contain w-full h-full drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)] group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAp-0oGeAgwbcSWERC6Ju9SRNWiFkLU4zv9qopSyi8oQ6BoQk3sb8kVlg9FaiqS8tp3y2Ml54Mh7a5aZ1ZPae0SRMs2wRGdKJfUry1zyxhcuNq1wMTFs5-Bz3L_iGVxlTAZZJ7mzAA2lyvZ0z6H-4IXQQroOS0rXLcI-_uXHerBy62AyU_qH5p58CNRiyTFA7HaqVo55LnsSvJV9VNjjQApyVQI-CNmof0GJlJsfkjBVtYdbkZVLkTk3opRhVytPfRXbJnGBL_BdVzy"/>
+</div>
+<div class="p-8 flex flex-col flex-grow">
+<div class="mb-4">
+<h3 class="text-2xl font-serif text-on-surface mb-1">Макадамия</h3>
+<span class="text-[10px] uppercase tracking-widest text-secondary font-bold">Ореховое золото</span>
+</div>
+<div class="flex justify-between items-center mt-auto pt-6 border-t border-white/5">
+<span class="text-xl font-serif text-primary">210 ₽</span>
+<a class="flex items-center gap-2 text-[10px] uppercase tracking-[0.2em] text-on-surface-variant hover:text-secondary transition-colors" href="macadamya.html">
+                            Подробнее
+                            <span class="material-symbols-outlined text-sm">north_east</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Card 2: Фисташка -->
+<div class="group hover-lift bg-surface-variant/40 rounded-xl overflow-hidden border border-white/5 flex flex-col h-full scroll-reveal" style="transition-delay: 100ms;">
+<div class="aspect-[4/5] w-full relative p-8 flex items-center justify-center overflow-hidden bg-[#1d2319]">
+<img alt="Фисташка и матча" class="object-contain w-full h-full drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)] group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkZQniAGNAYRtgwA0mg0hr7TOLj6vfbEiS0Kc-8OAgstJ7mABfvwISnMu5ayjZHaZKY4Q3xcjP9fApXPRGRjWimT81kR9U0YgVTHfK3jVe8F_cyvrbElmEFAGxYeXvJDPV2RzRGGNOGyRtnjfumaxuSiXRUrTlL-MB2hnaAMOkk3dRhiciyTw0Z9JXclY7DuKBQUgn6g3DdfKoNx81S-DxNa7_ZdA6OLFqBI7FVcyWUEXJYzF3rIZWgNEzMw2fJoslsG_zuTjbWL3n"/>
+</div>
+<div class="p-8 flex flex-col flex-grow">
+<div class="mb-4">
+<h3 class="text-2xl font-serif text-on-surface mb-1">Фисташка и матча</h3>
+<span class="text-[10px] uppercase tracking-widest text-secondary font-bold">Энергия Дзен</span>
+</div>
+<div class="flex justify-between items-center mt-auto pt-6 border-t border-white/5">
+<span class="text-xl font-serif text-primary">210 ₽</span>
+<a class="flex items-center gap-2 text-[10px] uppercase tracking-[0.2em] text-on-surface-variant hover:text-secondary transition-colors" href="fistashka.html">
+                            Подробнее
+                            <span class="material-symbols-outlined text-sm">north_east</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Card 3: Паста Амосова -->
+<div class="group hover-lift bg-surface-variant/40 rounded-xl overflow-hidden border border-white/5 flex flex-col h-full scroll-reveal" style="transition-delay: 200ms;">
+<div class="aspect-[4/5] w-full relative p-8 flex items-center justify-center overflow-hidden bg-[#24211a]">
+<img alt="Паста Амосова" class="object-contain w-full h-full drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)] group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAg730_0OWBncLnTZ4efGic1FsJC8TmSzSXXUs_Gjf2FsvWmLxot_r-79TW7hFYlowQcKh4oDpFXez6Rtw2SvuJH3kK_O67P_Ta4_pB-GtXkuJvU6nL8yQDM4sh-zCVPQX0ld62lY42bE9_2cYR1IuRc4Yv87zEfGO-UGFuD4Jfv41cQSPJR87F1EG2K8chCKaQwVXth2tUzJNbM2OuAAbFY627SbQUGn9s-YbJoqwIbwOOBGY0oFhphXM6d3XOtbn60CHfC9MRg6WA"/>
+</div>
+<div class="p-8 flex flex-col flex-grow">
+<div class="mb-4">
+<h3 class="text-2xl font-serif text-on-surface mb-1">Паста Амосова</h3>
+<span class="text-[10px] uppercase tracking-widest text-secondary font-bold">Иммунный щит</span>
+</div>
+<div class="flex justify-between items-center mt-auto pt-6 border-t border-white/5">
+<span class="text-xl font-serif text-primary">210 ₽</span>
+<a class="flex items-center gap-2 text-[10px] uppercase tracking-[0.2em] text-on-surface-variant hover:text-secondary transition-colors" href="pasta-amosova.html">
+                            Подробнее
+                            <span class="material-symbols-outlined text-sm">north_east</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Card 4: Марципан -->
+<div class="group hover-lift bg-surface-variant/40 rounded-xl overflow-hidden border border-white/5 flex flex-col h-full scroll-reveal" style="transition-delay: 300ms;">
+<div class="aspect-[4/5] w-full relative p-8 flex items-center justify-center overflow-hidden bg-[#2b2b2b]">
+<img alt="Марципан" class="object-contain w-full h-full drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)] group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAl7ViVhulxcxm20xzn89W_5pTfTS4fqcOqpPowjjblsaZ6D7TMXadG8pN0TLg8Y_KonAfrkiiw2KOqC7K6iO9C_QGxUeFtEPmuLTmaFpW-ZjTDh4vYF3GxaCRh1rQZNryHOYFFzZBapcsaRsFJ6rQ6SbPLnDaSzGl0JkJxm6aR9LddJHGSSfkZPsOYoqUGpUMNkAp3Xw-hzvVoaOAcEVdg4PulMpdMNK6Kjtbrw1O0AeiZSVDHMjBvA-R1LbhE8oHVkLIWfIMmlAiw"/>
+</div>
+<div class="p-8 flex flex-col flex-grow">
+<div class="mb-4">
+<h3 class="text-2xl font-serif text-on-surface mb-1">Марципан</h3>
+<span class="text-[10px] uppercase tracking-widest text-secondary font-bold">Благородная классика</span>
+</div>
+<div class="flex justify-between items-center mt-auto pt-6 border-t border-white/5">
+<span class="text-xl font-serif text-primary">210 ₽</span>
+<a class="flex items-center gap-2 text-[10px] uppercase tracking-[0.2em] text-on-surface-variant hover:text-secondary transition-colors" href="marcipan.html">
+                            Подробнее
+                            <span class="material-symbols-outlined text-sm">north_east</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Craft Ethics Section -->
+<section class="py-stack-lg relative overflow-hidden">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="scroll-reveal">
+<h2 class="text-4xl md:text-5xl font-serif text-on-surface mb-8">Этика ручного труда</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+<div class="p-8 rounded-xl bg-surface-variant/20 border border-white/5 hover:bg-surface-variant/40 transition-colors">
+<span class="material-symbols-outlined text-secondary text-4xl mb-4">local_shipping</span>
+<h4 class="text-lg font-serif mb-2">Локальность</h4>
+<p class="text-sm text-on-surface-variant">Произведено в сердце Самары. Мы поддерживаем местных фермеров и гордимся своим происхождением.</p>
+</div>
+<div class="p-8 rounded-xl bg-surface-variant/20 border border-white/5 hover:bg-surface-variant/40 transition-colors">
+<span class="material-symbols-outlined text-secondary text-4xl mb-4">compost</span>
+<h4 class="text-lg font-serif mb-2">Эко-упаковка</h4>
+<p class="text-sm text-on-surface-variant">Мы стремимся к минимизации следа, используя перерабатываемые материалы для нашей продукции.</p>
+</div>
+<div class="p-8 rounded-xl bg-surface-variant/20 border border-white/5 hover:bg-surface-variant/40 transition-colors">
+<span class="material-symbols-outlined text-secondary text-4xl mb-4">inventory_2</span>
+<h4 class="text-lg font-serif mb-2">Крафт</h4>
+<p class="text-sm text-on-surface-variant">Отсутствие промышленной обработки позволяет сохранить первозданную текстуру и аромат ингредиентов.</p>
+</div>
+<div class="p-8 rounded-xl bg-surface-variant/20 border border-white/5 hover:bg-surface-variant/40 transition-colors">
+<span class="material-symbols-outlined text-secondary text-4xl mb-4">verified</span>
+<h4 class="text-lg font-serif mb-2">Честный состав</h4>
+<p class="text-sm text-on-surface-variant">Каждый компонент на этикетке понятен и прозрачен. Мы не прячемся за химическими терминами.</p>
+</div>
+</div>
+</div>
+<div class="relative scroll-reveal" style="transition-delay: 200ms;">
+<div class="organic-shape bg-secondary/10 absolute inset-0 -rotate-6 scale-110 -z-10"></div>
+<img alt="Craft workshop" class="rounded-xl shadow-2xl w-full h-[600px] object-cover border border-white/10" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIpihmPFUHsfbkyrgYqvg6NGwArluxWP08_wquO1RQqvthU5YxVfulYxABUe3oAHwgTHs6iI8_ac_AEiLxIrPjRU5ZxRddGAf1N8-pO1JnstIO91w2BdMCC-DJvcwRhtUD-bnMONlP7Tlzf8W11QQ7KvECFM6T9Y63BTY9H6SYfl9B7DIYp5t9SVTGSdd_eYUXdn8-OFBAxuk0um_cW-4_fH2j_suMrRDg-g7RW-0E2dcqX5z1RF1BQMbCKoIADP-uY_lQpyJFndYq"/>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-background border-t border-white/5 pt-stack-lg pb-12">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12 items-start mb-16">
+<div class="text-center md:text-left">
+<a class="text-3xl font-serif text-primary mb-4 block" href="index.html">БАКИБАР</a>
+<p class="text-on-surface-variant text-sm max-w-xs mx-auto md:mx-0">Семейное производство натуральных десертов и батончиков из Самары.</p>
+</div>
+<div class="flex flex-col items-center gap-6">
+<div class="flex gap-8">
+<a class="text-on-surface-variant hover:text-secondary transition-colors text-xs uppercase tracking-widest" href="tel:+79264500383">+7 926 450 03 83</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors text-xs uppercase tracking-widest" href="mailto:bakibar@bk.ru">bakibar@bk.ru</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors text-xs uppercase tracking-widest" href="https://t.me/bakibar_" target="_blank">@bakibar_</a>
+</div>
+</div>
+<div class="text-center md:text-right">
+<span class="text-[10px] uppercase tracking-[0.3em] text-secondary font-bold mb-2 block">Место силы</span>
+<p class="text-on-surface-variant text-sm">Самара, Россия • 2026</p>
+</div>
+</div>
+<div class="pt-8 border-t border-white/5 text-center">
+<p class="text-[10px] uppercase tracking-widest text-on-surface-variant opacity-50">© 2026 БАКИБАР. Сделано с любовью к природе.</p>
+</div>
+</div>
+</footer>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.scroll-reveal').forEach((element) => {
+            observer.observe(element);
+        });
+    });
+</script>
+</body></html>

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="ru"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>БакиБар - О бренде | Natural Storytelling</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&amp;family=Playfair+Display:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-fixed": "#ffe088",
+                        "on-secondary-fixed-variant": "#574238",
+                        "surface-container": "#201f1f",
+                        "on-primary-fixed": "#241a00",
+                        "tertiary": "#d0cdcd",
+                        "on-primary": "#3c2f00",
+                        "on-secondary": "#3f2c23",
+                        "error-container": "#93000a",
+                        "inverse-primary": "#735c00",
+                        "secondary-fixed": "#fbdcce",
+                        "background": "#131313",
+                        "on-tertiary": "#313030",
+                        "on-primary-container": "#554300",
+                        "surface": "#131313",
+                        "surface-container-low": "#1c1b1b",
+                        "outline-variant": "#4d4635",
+                        "on-secondary-fixed": "#281810",
+                        "tertiary-container": "#b4b2b2",
+                        "surface-bright": "#3a3939",
+                        "surface-container-highest": "#353534",
+                        "tertiary-fixed-dim": "#c8c6c5",
+                        "primary-container": "#d4af37",
+                        "on-tertiary-container": "#454544",
+                        "tertiary-fixed": "#e5e2e1",
+                        "primary": "#f2ca50",
+                        "on-tertiary-fixed-variant": "#474746",
+                        "secondary": "#dec1b3",
+                        "secondary-fixed-dim": "#dec1b3",
+                        "on-primary-fixed-variant": "#574500",
+                        "inverse-surface": "#e5e2e1",
+                        "surface-container-lowest": "#0e0e0e",
+                        "secondary-container": "#574238",
+                        "on-tertiary-fixed": "#1c1b1b",
+                        "error": "#ffb4ab",
+                        "on-surface-variant": "#d0c5af",
+                        "primary-fixed-dim": "#e9c349",
+                        "on-surface": "#e5e2e1",
+                        "on-secondary-container": "#cbafa2",
+                        "surface-dim": "#131313",
+                        "surface-container-high": "#2a2a2a",
+                        "on-background": "#e5e2e1",
+                        "on-error-container": "#ffdad6",
+                        "surface-variant": "#353534",
+                        "surface-tint": "#e9c349",
+                        "outline": "#99907c",
+                        "on-error": "#690005",
+                        "inverse-on-surface": "#313030"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "stack-sm": "16px",
+                        "stack-md": "32px",
+                        "section-padding": "120px",
+                        "container-max": "1280px",
+                        "margin-mobile": "20px",
+                        "gutter": "24px",
+                        "base": "8px",
+                        "stack-lg": "64px"
+                    },
+                    "fontFamily": {
+                        "display-lg-mobile": ["Playfair Display"],
+                        "headline-md": ["Playfair Display"],
+                        "label-caps": ["Manrope"],
+                        "display-lg": ["Playfair Display"],
+                        "button": ["Manrope"],
+                        "body-lg": ["Manrope"],
+                        "body-md": ["Manrope"]
+                    },
+                    "fontSize": {
+                        "display-lg-mobile": ["40px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.15em", "fontWeight": "600"}],
+                        "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "button": ["14px", {"lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0.01em", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(20px);
+            visibility: hidden;
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+            will-change: opacity, visibility;
+        }
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: none;
+            visibility: visible;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface antialiased overflow-x-hidden selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar Component -->
+<nav class="fixed top-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-gutter max-w-container-max mx-auto h-20 bg-surface/80 dark:bg-surface/80 backdrop-blur-md border-b border-outline-variant/20">
+<a class="font-display-lg text-headline-md text-primary dark:text-primary tracking-tighter" href="index.html">БакиБар</a>
+<!-- Desktop Nav -->
+<div class="hidden md:flex items-center gap-stack-md">
+<a class="font-button text-button uppercase text-on-surface dark:text-on-surface hover:text-primary-fixed-dim transition-all duration-300 cursor-pointer active:opacity-80" href="index.html">Главная</a>
+<a class="font-button text-button uppercase text-on-surface dark:text-on-surface hover:text-primary-fixed-dim transition-all duration-300 cursor-pointer active:opacity-80" href="catalog.html">Каталог</a>
+<a class="font-button text-button uppercase text-primary dark:text-primary border-b-2 border-primary pb-1 cursor-pointer active:opacity-80" href="about.html">О бренде</a>
+<a class="font-button text-button uppercase text-on-surface dark:text-on-surface hover:text-primary-fixed-dim transition-all duration-300 cursor-pointer active:opacity-80" href="b2b.html">B2B/Инвесторам</a>
+<a class="font-button text-button uppercase text-on-surface dark:text-on-surface hover:text-primary-fixed-dim transition-all duration-300 cursor-pointer active:opacity-80" href="sex.html">Секс</a>
+<a class="font-button text-button uppercase text-on-surface dark:text-on-surface hover:text-primary-fixed-dim transition-all duration-300 cursor-pointer active:opacity-80" href="contacts.html">Контакты</a>
+</div>
+<!-- Mobile Menu Icon (Visual Only) -->
+<button class="md:hidden text-primary p-2">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative h-screen w-full flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Wide cinematic view of the Volga river at sunset" class="w-full h-full object-cover opacity-60" src="https://lh3.googleusercontent.com/aida/AP1WRLuv2I0NTxh0HWEO0NI6GDZJuQ4VayccMx9k5LbI_GsgNQjd9nG7lBAvYVQVISaRZmmL2TlIIb5IWLd8B8hFAYdACDFztFC5W6ZdOlgs-Vc56WH1CpCorICQCwDS0NzfK86DJpzGka9dHKYMs5ngObw4abmY49jPrsLr7ASx1Z5SSUj1JtEOL-5n1YEp02jaPlOtEJw-BX4lHO_1IudwRJXjVzwR7PCoXWB8AcM-kl66aWAky1bqdPHE6tVJ"/>
+<div class="absolute inset-0 bg-gradient-to-b from-background/40 via-background/60 to-background"></div>
+</div>
+<div class="relative z-10 text-center px-margin-mobile md:px-gutter max-w-4xl mx-auto fade-in-section is-visible">
+<span class="font-label-caps text-label-caps text-primary tracking-widest uppercase mb-stack-sm block">Heart of Samara</span>
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-stack-md">
+                    История в деталях
+                </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Каждый батончик БакиБар — это не просто еда, это результат многовековых традиций и уважения к природе. Мы собираем лучшие ингредиенты на плодородных землях Самарской Луки.</p>
+<div class="mt-stack-lg animate-bounce">
+<span class="material-symbols-outlined text-primary text-3xl">expand_more</span>
+</div>
+</div>
+</section>
+<!-- Values Section -->
+<section class="py-section-padding px-margin-mobile md:px-gutter max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-5 md:col-start-2 fade-in-section">
+<h2 class="font-headline-md text-headline-md text-primary mb-stack-md">Наши Ценности</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-stack-sm">
+                        Для нас здоровье — это не просто отсутствие болезней, это состояние полной гармонии с собой и окружающим миром. Мы верим в силу натуральных продуктов.
+                    </p>
+<p class="font-body-md text-body-md text-on-surface-variant/80">В каждом кусочке БакиБар скрыта энергия солнца и сила земли, бережно сохраненные для  вас. Мы не используем искусственных добавок, только чистая польза.</p>
+<div class="mt-stack-md flex flex-wrap gap-3">
+<span class="inline-flex items-center px-4 py-2 rounded-full border border-primary/30 bg-primary/10 font-label-caps text-label-caps text-primary">
+<span class="material-symbols-outlined mr-2 text-[16px]">energy_savings_leaf</span> Энергия
+                        </span>
+<span class="inline-flex items-center px-4 py-2 rounded-full border border-primary/30 bg-primary/10 font-label-caps text-label-caps text-primary">
+<span class="material-symbols-outlined mr-2 text-[16px]">favorite</span> Сила
+                        </span>
+</div>
+</div>
+<div class="md:col-span-5 md:col-start-8 mt-stack-md md:mt-0 fade-in-section">
+<div class="relative w-full aspect-[4/5] rounded-lg overflow-hidden border border-outline-variant/30">
+<img alt="Golden wheat fields at sunset representing longevity and natural ingredients" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPc-QwmnWjsRRKg8ifNKZISBzTFkXPu2kGT9gcPDDU709QNyS23SOfeBxSfHN5nPwVHyO7XxZhDWrlEcOJGB1q9Kw6wKOmkx4cjLsgQ7U8kia6UDeDSrBUhxLmY12jwCQgN_H3Ejsl0osXctExVEvzV8RUF0HCGJ3nmtj4sFxrk5O9SF1dgqcF7PNGVXcX8ZkhCUckPLUpDFTXAcL6EZAWThiHykfOrWTcUYZ90Ig4cV7nhC-fnBukrJBcdJJdP48wGz4LWxl67jII"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-80"></div>
+<div class="absolute bottom-stack-md left-stack-md right-stack-md">
+<p class="font-headline-md text-headline-md text-primary-fixed-dim">Наследие Долголетия</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Divider -->
+<div class="w-full max-w-container-max mx-auto px-margin-mobile md:px-gutter">
+<div class="h-px bg-outline-variant/20 w-full"></div>
+</div>
+<!-- The Process / Manifesto -->
+<section class="py-section-padding px-margin-mobile md:px-gutter max-w-container-max mx-auto">
+<div class="text-center max-w-3xl mx-auto mb-section-padding fade-in-section">
+<h2 class="font-display-lg-mobile md:font-headline-md text-display-lg-mobile md:text-headline-md text-primary mb-stack-md">Чистая Энергия</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Секрет БакиБар прост — мы берем лучшее, что дает природа, и превращаем это в идеальный баланс вкуса и пользы. Без компромиссов.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Card 1 -->
+<div class="bg-surface-container-low border border-outline-variant/20 rounded-lg p-stack-md fade-in-section hover:border-primary/50 transition-colors duration-500">
+<span class="material-symbols-outlined text-primary text-4xl mb-stack-sm block" style="font-variation-settings: 'FILL' 1;">spa</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-base text-xl">Отбор</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        Только цельные орехи и свежие сухофрукты, прошедшие строгий контроль качества.
+                    </p>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-low border border-outline-variant/20 rounded-lg p-stack-md fade-in-section hover:border-primary/50 transition-colors duration-500 delay-100">
+<span class="material-symbols-outlined text-primary text-4xl mb-stack-sm block" style="font-variation-settings: 'FILL' 1;">science</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-base text-xl">Формула</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        Уникальное сочетание макро- и микроэлементов для поддержания мужского здоровья.
+                    </p>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-low border border-outline-variant/20 rounded-lg p-stack-md fade-in-section hover:border-primary/50 transition-colors duration-500 delay-200">
+<span class="material-symbols-outlined text-primary text-4xl mb-stack-sm block" style="font-variation-settings: 'FILL' 1;">fitness_center</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-base text-xl">Результат</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        Повышение выносливости, уверенность в себе и заряд бодрости на весь день.
+                    </p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Component -->
+<footer class="w-full py-section-padding px-margin-mobile md:px-gutter max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-start gap-stack-md bg-surface-container-lowest dark:bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="flex flex-col gap-stack-sm">
+<div class="font-display-lg text-headline-md text-primary dark:text-primary">БакиБар</div>
+<p class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant">© 2026 БакиБар. Все права защищены. Dark Luxury Health.</p>
+</div>
+<div class="flex flex-col gap-base">
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors" href="#">Политика конфиденциальности</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors" href="#">Публичная оферта</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors" href="#">Доставка и оплата</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors" href="contacts.html">Контакты</a>
+</div>
+</footer>
+<!-- Scroll Interaction Script -->
+<script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        // Optional: Stop observing once visible if you only want it to animate once
+                        // observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: "0px 0px -50px 0px"
+            });
+
+            document.querySelectorAll('.fade-in-section').forEach((el) => {
+                observer.observe(el);
+            });
+        });
+    </script>
+</body></html>

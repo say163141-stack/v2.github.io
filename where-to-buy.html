@@ -1,0 +1,249 @@
+<!DOCTYPE html><html class="dark" lang="ru" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Где купить | БакиБар</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&amp;family=Manrope:wght@400;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "inverse-on-surface": "#313030",
+                    "secondary-container": "#574238",
+                    "outline": "#99907c",
+                    "on-tertiary-container": "#454544",
+                    "primary-fixed-dim": "#e9c349",
+                    "primary-container": "#d4af37",
+                    "surface-dim": "#131313",
+                    "on-primary-container": "#554300",
+                    "on-secondary-fixed": "#281810",
+                    "on-background": "#e5e2e1",
+                    "surface-container-highest": "#353534",
+                    "on-tertiary-fixed": "#1c1b1b",
+                    "error": "#ffb4ab",
+                    "background": "#131313",
+                    "error-container": "#93000a",
+                    "surface": "#131313",
+                    "surface-bright": "#3a3939",
+                    "tertiary": "#d0cdcd",
+                    "on-primary-fixed-variant": "#574500",
+                    "inverse-surface": "#e5e2e1",
+                    "on-surface-variant": "#d0c5af",
+                    "on-surface": "#e5e2e1",
+                    "on-secondary-fixed-variant": "#574238",
+                    "on-secondary": "#3f2c23",
+                    "outline-variant": "#4d4635",
+                    "inverse-primary": "#735c00",
+                    "on-tertiary-fixed-variant": "#474746",
+                    "surface-container-lowest": "#0e0e0e",
+                    "secondary-fixed": "#fbdcce",
+                    "primary-fixed": "#ffe088",
+                    "secondary-fixed-dim": "#dec1b3",
+                    "on-primary-fixed": "#241a00",
+                    "surface-variant": "#353534",
+                    "surface-tint": "#e9c349",
+                    "on-error-container": "#ffdad6",
+                    "secondary": "#dec1b3",
+                    "on-error": "#690005",
+                    "primary": "#f2ca50",
+                    "surface-container-low": "#1c1b1b",
+                    "surface-container": "#201f1f",
+                    "on-tertiary": "#313030",
+                    "tertiary-container": "#b4b2b2",
+                    "surface-container-high": "#2a2a2a",
+                    "tertiary-fixed-dim": "#c8c6c5",
+                    "on-secondary-container": "#cbafa2",
+                    "tertiary-fixed": "#e5e2e1",
+                    "on-primary": "#3c2f00"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "stack-sm": "16px",
+                    "section-padding": "120px",
+                    "gutter": "24px",
+                    "stack-lg": "64px",
+                    "base": "8px",
+                    "container-max": "1280px",
+                    "stack-md": "32px",
+                    "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                    "display-lg": ["Playfair Display"],
+                    "body-md": ["Manrope"],
+                    "body-lg": ["Manrope"],
+                    "headline-md": ["Playfair Display"],
+                    "button": ["Manrope"],
+                    "label-caps": ["Manrope"],
+                    "display-lg-mobile": ["Playfair Display"]
+            },
+            "fontSize": {
+                    "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0.01em", "fontWeight": "400"}],
+                    "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "button": ["14px", {"lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.15em", "fontWeight": "600"}],
+                    "display-lg-mobile": ["40px", {"lineHeight": "1.2", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { background-color: #131313; color: #e5e2e1; scroll-behavior: smooth; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
+        .glass-panel { backdrop-filter: blur(12px); border: 1px solid rgba(233, 195, 73, 0.1); background: rgba(32, 31, 31, 0.6); }
+        .gold-glow:hover { text-shadow: 0 0 15px rgba(233, 195, 73, 0.5); }
+    </style>
+</head>
+<body class="font-body-md text-on-background bg-background text-on-background">
+<!-- TopAppBar -->
+<header class="fixed top-0 z-50 w-full bg-surface/80 backdrop-blur-md">
+<nav class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+<a href="index.html" class="font-display-lg text-headline-md font-bold text-primary">БавиБар</a>
+<div class="hidden md:flex gap-gutter items-center"><a class="text-on-surface-variant hover:text-primary transition-colors font-label-caps uppercase tracking-widest text-[11px]" href="index.html">Главная</a><a class="text-on-surface-variant hover:text-primary transition-colors font-label-caps uppercase tracking-widest text-[11px]" href="catalog.html">Каталог</a><a class="text-on-surface-variant hover:text-primary transition-colors font-label-caps uppercase tracking-widest text-[11px]" href="about.html">О бренде</a><a class="text-on-surface-variant hover:text-primary transition-colors font-label-caps uppercase tracking-widest text-[11px]" href="b2b.html">B2B/Инвесторам</a><a class="text-on-surface-variant hover:text-primary transition-colors font-label-caps uppercase tracking-widest text-[11px]" href="sex.html">Секс</a><a class="text-primary border-b-2 border-primary pb-1 font-label-caps uppercase tracking-widest text-[11px]" href="where-to-buy.html">Где купить</a><a class="text-on-surface-variant hover:text-primary transition-colors font-label-caps uppercase tracking-widest text-[11px]" href="contacts.html">Контакты</a></div>
+</nav>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-[716px] flex items-center justify-center pt-24 overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-40" data-alt="A luxurious retail interior with deep shadows and soft golden ambient lighting illuminating premium wellness products on obsidian shelves. The atmosphere is sophisticated and exclusive, featuring high-contrast macro textures of natural materials and elegant glass bottles. Soft smoke-like mist drifts through the scene, adding a layer of mystery and organic refinement consistent with a dark luxury health brand." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAefO1Y6Z7PObaKf9XXytlS-YGDVhh3SN8OwgOtKdsfU9cjmeoRQcgMtMMR90F7cZD-74LnxWLl5sRN9Z20v7Yuany4ibGwSQSoW_HUj-wmschPdZuAieAM4pYgtmjLAoZic7dDtyLtEk4weYyZG9hdwZHvNxO7se8RwbhulEN780VBTRbFn1uI_FuY4GTqDfh0JYzXR8YUaAe6cDVtcOY2dufON0sOoNLSXdd5eBd31ndpF8DgU_lcM8s1roUtYeiO12OQAvHAqiju">
+<div class="absolute inset-0 bg-gradient-to-b from-transparent via-background/60 to-background"></div>
+</div>
+<div class="relative z-10 text-center max-w-4xl px-margin-mobile">
+<span class="font-label-caps text-primary tracking-[0.3em] uppercase mb-4 block">Эксклюзивность и качество</span>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-background mb-stack-sm">
+                    Где купить
+                </h1>
+<div class="w-24 h-px bg-primary mx-auto mb-stack-md"></div>
+<p class="font-body-lg text-on-surface-variant max-w-2xl mx-auto">
+                    Продукция БакиБар представлена в ограниченном тираже для сохранения высших стандартов качества и свежести ингредиентов. Найдите нас в проверенных сетях или закажите онлайн.
+                </p>
+</div>
+</section>
+<!-- Marketplace Bento Grid -->
+<section class="py-section-padding px-margin-mobile">
+<div class="max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<!-- Marketplace Card 1 -->
+<div class="glass-panel p-stack-lg group hover:border-primary/40 transition-all duration-500 relative overflow-hidden duration-1000 opacity-100 translate-y-0">
+<div class="absolute top-0 right-0 p-stack-sm opacity-10 group-hover:opacity-30 transition-opacity">
+<span class="material-symbols-outlined text-[120px] text-primary">shopping_bag</span>
+</div>
+<h3 class="font-headline-md text-on-background mb-base">Wildberries</h3>
+<div class="inline-block px-3 py-1 bg-primary/10 border border-primary/20 rounded-full mb-stack-md">
+<span class="text-[10px] font-label-caps text-primary uppercase tracking-widest">Скоро в продаже</span>
+</div>
+<p class="font-body-md text-on-surface-variant mb-stack-lg">
+                            Мы работаем над тем, чтобы предоставить вам удобную доставку в любой пункт выдачи. Совсем скоро коллекция БакиБар будет доступна в официальном магазине.
+                        </p>
+<div class="flex items-center gap-2 text-outline-variant italic">
+<span class="material-symbols-outlined text-sm">schedule</span>
+<span class="font-label-caps text-[11px]">Ожидайте в следующем квартале</span>
+</div>
+</div>
+<!-- Marketplace Card 2 -->
+<div class="glass-panel p-stack-lg group hover:border-primary/40 transition-all duration-500 relative overflow-hidden duration-1000 opacity-100 translate-y-0">
+<div class="absolute top-0 right-0 p-stack-sm opacity-10 group-hover:opacity-30 transition-opacity">
+<span class="material-symbols-outlined text-[120px] text-primary">local_mall</span>
+</div>
+<h3 class="font-headline-md text-on-background mb-base">Ozon</h3>
+<div class="inline-block px-3 py-1 bg-primary/10 border border-primary/20 rounded-full mb-stack-md">
+<span class="text-[10px] font-label-caps text-primary uppercase tracking-widest">В будущем</span>
+</div>
+<p class="font-body-md text-on-surface-variant mb-stack-lg">
+                            Подготовка ассортимента для маркетплейса Ozon находится на финальной стадии. Мы гарантируем подлинность каждого продукта при покупке через нашу платформу.
+                        </p>
+<div class="flex items-center gap-2 text-outline-variant italic">
+<span class="material-symbols-outlined text-sm">notifications_active</span>
+<span class="font-label-caps text-[11px]">Подпишитесь на уведомления в соцсетях</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Info Section -->
+<section class="py-section-padding bg-surface-container-low">
+<div class="max-w-container-max mx-auto px-margin-mobile">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-stack-lg border-y border-outline-variant/20 py-stack-lg">
+<!-- Phone -->
+<div class="flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-primary mb-4 text-4xl">call</span>
+<h4 class="font-label-caps text-outline uppercase tracking-widest text-[11px] mb-2">Телефон</h4>
+<a class="font-headline-md text-on-background hover:text-primary transition-colors" href="tel:+79264500383">+7 926 450 03 83</a>
+</div>
+<!-- Email -->
+<div class="flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-primary mb-4 text-4xl">mail</span>
+<h4 class="font-label-caps text-outline uppercase tracking-widest text-[11px] mb-2">Электронная почта</h4>
+<a class="font-headline-md text-on-background hover:text-primary transition-colors" href="mailto:bakibar@bk.ru">bakibar@bk.ru</a>
+</div>
+<!-- Social -->
+<div class="flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-primary mb-4 text-4xl">share</span>
+<h4 class="font-label-caps text-outline uppercase tracking-widest text-[11px] mb-2">Instagram</h4>
+<a class="font-headline-md text-on-background hover:text-primary transition-colors" href="https://instagram.com/bakibar_" target="_blank">@bakibar_</a>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-section-padding text-center">
+<div class="max-w-2xl mx-auto px-margin-mobile">
+<h2 class="font-display-lg text-headline-md md:text-headline-md mb-stack-md text-on-background">
+                    Оптовые закупки и партнерство
+                </h2>
+<p class="font-body-md text-on-surface-variant mb-stack-lg">
+                    Заинтересованы в представлении БакиБар в своей сети или фитнес-клубе? Мы предлагаем специальные условия для B2B партнеров и дистрибьюторов премиум-сегмента.
+                </p>
+<a href="b2b.html" class="inline-flex items-center gap-3 bg-primary text-on-primary px-10 py-5 font-button text-button uppercase tracking-[0.2em] hover:shadow-[0_0_20px_rgba(242,202,80,0.4)] transition-all active:scale-95">
+                    Связаться для опта
+                    <span class="material-symbols-outlined">trending_flat</span>
+</a>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-highest">
+<div class="w-full px-margin-mobile md:px-margin-desktop py-stack-lg grid grid-cols-1 md:grid-cols-3 gap-gutter max-w-container-max mx-auto items-start">
+<div class="space-y-4">
+<a href="index.html" class="font-display-lg text-display-lg text-primary block">БакиБар</a>
+<p class="font-body-md text-on-surface-variant max-w-xs">© 2026 БакиБар. Все права защищены.</p>
+</div>
+<div class="flex flex-col gap-4"><h5 class="font-label-caps text-on-surface uppercase tracking-widest">Контакты</h5><a class="font-body-md text-on-surface-variant hover:text-primary transition-all" href="tel:+79264500383">+79264500383</a><a class="font-body-md text-on-surface-variant hover:text-primary transition-all" href="mailto:bakibar@bk.ru">bakibar@bk.ru</a><a class="font-body-md text-on-surface-variant hover:text-primary transition-all" href="contacts.html">@bakibar_</a></div>
+<div class="flex flex-col gap-4 md:items-end"><h5 class="font-label-caps text-on-surface uppercase tracking-widest">Информация</h5><a class="font-body-md text-on-surface-variant hover:text-primary transition-all" href="privacy.html">Политика конфиденциальности</a><a class="font-body-md text-on-surface-variant hover:text-primary transition-all" href="delivery.html">Условия доставки</a></div>
+</div>
+<div class="w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-stack-sm border-t border-outline-variant/10">
+<p class="font-label-sm text-on-surface-variant text-center md:text-left opacity-60">© 2026 БакиБар. Все права защищены.</p>
+</div>
+</footer>
+<script>
+        // Smooth reveal on scroll for glass panels
+        const observerOptions = { threshold: 0.1 };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.glass-panel').forEach(panel => {
+            panel.classList.add('opacity-0', 'translate-y-10', 'transition-all', 'duration-1000');
+            observer.observe(panel);
+        });
+    </script>
+
+
+</body></html>

@@ -1,0 +1,324 @@
+<!DOCTYPE html><html class="dark" lang="ru" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title class="">Контакты | БакиБар</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&amp;family=Playfair+Display:ital,wght@0,600;0,700;1,600&amp;display=swap" rel="stylesheet">
+<!-- Material Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-container": "#b4b2b2",
+                    "primary-fixed-dim": "#e9c349",
+                    "on-tertiary-fixed-variant": "#474746",
+                    "error-container": "#93000a",
+                    "surface-container-high": "#2a2a2a",
+                    "on-primary": "#3c2f00",
+                    "tertiary-fixed": "#e5e2e1",
+                    "surface": "#131313",
+                    "primary-fixed": "#ffe088",
+                    "outline": "#99907c",
+                    "surface-container-low": "#1c1b1b",
+                    "on-error-container": "#ffdad6",
+                    "tertiary-fixed-dim": "#c8c6c5",
+                    "on-surface-variant": "#d0c5af",
+                    "on-primary-fixed-variant": "#574500",
+                    "surface-container": "#201f1f",
+                    "surface-dim": "#131313",
+                    "tertiary": "#d0cdcd",
+                    "on-tertiary-container": "#454544",
+                    "error": "#ffb4ab",
+                    "primary": "#f2ca50",
+                    "on-secondary-fixed-variant": "#574238",
+                    "inverse-primary": "#735c00",
+                    "on-primary-fixed": "#241a00",
+                    "background": "#131313",
+                    "on-surface": "#e5e2e1",
+                    "secondary-container": "#574238",
+                    "on-secondary": "#3f2c23",
+                    "secondary-fixed": "#fbdcce",
+                    "surface-variant": "#353534",
+                    "primary-container": "#d4af37",
+                    "on-secondary-fixed": "#281810",
+                    "outline-variant": "#4d4635",
+                    "surface-bright": "#3a3939",
+                    "on-background": "#e5e2e1",
+                    "on-primary-container": "#554300",
+                    "surface-container-lowest": "#0e0e0e",
+                    "surface-tint": "#e9c349",
+                    "secondary-fixed-dim": "#dec1b3",
+                    "inverse-on-surface": "#313030",
+                    "on-error": "#690005",
+                    "inverse-surface": "#e5e2e1",
+                    "secondary": "#dec1b3",
+                    "surface-container-highest": "#353534",
+                    "on-tertiary-fixed": "#1c1b1b",
+                    "on-tertiary": "#313030",
+                    "on-secondary-container": "#cbafa2"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "stack-sm": "16px",
+                    "stack-md": "32px",
+                    "section-padding": "120px",
+                    "base": "8px",
+                    "stack-lg": "64px",
+                    "margin-mobile": "20px",
+                    "container-max": "1280px",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "display-lg": [
+                            "Playfair Display"
+                    ],
+                    "label-caps": [
+                            "Manrope"
+                    ],
+                    "body-md": [
+                            "Manrope"
+                    ],
+                    "display-lg-mobile": [
+                            "Playfair Display"
+                    ],
+                    "headline-md": [
+                            "Playfair Display"
+                    ],
+                    "button": [
+                            "Manrope"
+                    ],
+                    "body-lg": [
+                            "Manrope"
+                    ]
+            },
+            "fontSize": {
+                    "display-lg": [
+                            "64px",
+                            {
+                                    "lineHeight": "1.1",
+                                    "letterSpacing": "-0.02em",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "label-caps": [
+                            "12px",
+                            {
+                                    "lineHeight": "1.0",
+                                    "letterSpacing": "0.15em",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "body-md": [
+                            "16px",
+                            {
+                                    "lineHeight": "1.6",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "display-lg-mobile": [
+                            "40px",
+                            {
+                                    "lineHeight": "1.2",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "headline-md": [
+                            "32px",
+                            {
+                                    "lineHeight": "1.3",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "button": [
+                            "14px",
+                            {
+                                    "lineHeight": "1.0",
+                                    "letterSpacing": "0.05em",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "body-lg": [
+                            "18px",
+                            {
+                                    "lineHeight": "1.6",
+                                    "letterSpacing": "0.01em",
+                                    "fontWeight": "400"
+                            }
+                    ]
+            }
+    },
+        },
+      }
+    </script>
+<style>
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+        
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
+        .delay-400 { animation-delay: 0.4s; }
+
+        /* Custom scrollbar for webkit */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #131313;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #4d4635;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #99907c;
+        }
+        
+        /* Editorial Input Styles */
+        .editorial-input {
+            background-color: transparent;
+            border: none;
+            border-bottom: 1px solid #4d4635; /* outline-variant */
+            border-radius: 0;
+            padding-left: 0;
+            padding-right: 0;
+            color: #e5e2e1; /* on-surface */
+            transition: border-color 0.3s ease;
+        }
+        .editorial-input:focus {
+            outline: none;
+            box-shadow: none;
+            border-bottom-color: #f2ca50; /* primary */
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md min-h-screen flex flex-col antialiased selection:bg-primary/30 selection:text-primary">
+<!-- TopNavBar Shared Component -->
+<header class="bg-surface/80 dark:bg-surface/80 backdrop-blur-md border-b border-outline-variant/20 fixed top-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-gutter max-w-container-max mx-auto h-20 transition-all duration-300">
+<a class="font-display-lg text-headline-md text-primary dark:text-primary tracking-tighter" href="index.html">БакиБар</a>
+<!-- Desktop Navigation -->
+<nav class="hidden md:flex items-center gap-8">
+<a class="font-button text-button uppercase text-on-surface dark:text-on-surface hover:text-primary-fixed-dim transition-all duration-300 cursor-pointer active:opacity-80" href="index.html">Главная</a>
+<a class="font-button text-button uppercase text-on-surface dark:text-on-surface hover:text-primary-fixed-dim transition-all duration-300 cursor-pointer active:opacity-80" href="catalog.html">Каталог</a>
+<a class="font-button text-button uppercase text-on-surface dark:text-on-surface hover:text-primary-fixed-dim transition-all duration-300 cursor-pointer active:opacity-80" href="about.html">О бренде</a>
+<a class="font-button text-button uppercase text-on-surface dark:text-on-surface hover:text-primary-fixed-dim transition-all duration-300 cursor-pointer active:opacity-80" href="b2b.html">B2B/Инвесторам</a>
+<a class="font-button text-button uppercase text-on-surface dark:text-on-surface hover:text-primary-fixed-dim transition-all duration-300 cursor-pointer active:opacity-80" href="sex.html">Секс</a>
+<a class="font-button text-button uppercase text-primary dark:text-primary border-b-2 border-primary pb-1 hover:text-primary-fixed-dim transition-all duration-300 cursor-pointer active:opacity-80" href="contacts.html">Контакты</a>
+</nav>
+<!-- Mobile Menu Button (Icon) -->
+<button class="md:hidden text-primary p-2">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">menu</span>
+</button>
+</header>
+<!-- Main Content: Split Screen Hero -->
+<main class="flex-grow flex flex-col lg:flex-row pt-20 h-auto lg:min-h-screen">
+<!-- Left Side: Atmospheric Image -->
+<div class="lg:w-1/2 relative h-[50vh] lg:h-auto overflow-hidden">
+<div class="absolute inset-0 bg-surface/20 z-10"></div> <!-- Subtle darkening overlay -->
+<img alt="Atmospheric BakiBar space" class="absolute inset-0 w-full h-full object-cover object-center scale-105 transform origin-center fade-in-up duration-1000" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqyK3jCpvG3uXfR0JMC7eb6gklKDK5btGs20OENCjl7e1tP0kHsdBLSwo9Q_KytXzb2nTghflqkOW1Cnql_wE6i_q8HuPAxJk346cBjul8Ywh6VsjLI0r9XE1ntGCOqoKgl9klUhB0qg9fcwyMYQnJuJxMVZOobP0VVn9z3P4LkgvjpHT57UpGzl5zeA9VjRKSSZ5EgiFBItlwUiEk06RnGAmLq7NuEEUOgBrLT9Ai6C6Yuw44idjtGcR-SywuRXjmo0DkAxG1LXbK">
+</div>
+<!-- Right Side: Contact Form -->
+<div class="lg:w-1/2 flex flex-col justify-center px-margin-mobile md:px-section-padding py-section-padding relative z-20 bg-surface">
+<div class="max-w-xl mx-auto w-full">
+<div class="mb-stack-lg fade-in-up delay-100">
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-stack-sm leading-tight">Свяжитесь с нами</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-md">Оставьте заявку, и наш менеджер свяжется с вами для обсуждения индивидуальных условий или консультации.</p>
+</div>
+<form class="space-y-stack-md fade-in-up delay-200">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-stack-md">
+<div class="relative">
+<input class="editorial-input w-full font-body-md text-body-md py-2" id="name" name="name" placeholder="Ваше имя" required="" type="text">
+</div>
+<div class="relative">
+<input class="editorial-input w-full font-body-md text-body-md py-2" id="email" name="email" placeholder="Email" required="" type="email">
+</div>
+</div>
+<div class="relative">
+<input class="editorial-input w-full font-body-md text-body-md py-2" id="phone" name="phone" placeholder="Телефон (опционально)" type="tel">
+</div>
+<div class="relative">
+<textarea class="editorial-input w-full font-body-md text-body-md py-2 resize-none" id="message" name="message" placeholder="Сообщение или вопрос..." required="" rows="4"></textarea>
+</div>
+<button class="w-full md:w-auto bg-primary text-on-primary font-button text-button uppercase px-8 py-4 rounded-DEFAULT hover:bg-primary-fixed-dim transition-colors duration-300 mt-stack-md flex items-center justify-center gap-2 group" type="submit">
+                        Отправить запрос
+                        <span class="material-symbols-outlined text-on-primary group-hover:translate-x-1 transition-transform duration-300" style="font-variation-settings: 'FILL' 0;">arrow_forward</span>
+</button>
+<div id="form-toast" style="display:none;margin-top:1rem;padding:.75rem 1rem;background:#d4eca2;color:#141f00;border-radius:8px;font-size:.875rem;font-weight:600;">
+  ✓ Заявка отправлена! Свяжемся с вами в ближайшее время.
+</div>
+</form>
+<script>
+document.querySelector('form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const toast = document.getElementById('form-toast');
+  this.reset();
+  toast.style.display = 'block';
+  setTimeout(() => { toast.style.display = 'none'; }, 5000);
+});
+</script>
+<!-- Additional Contact Info -->
+<div class="mt-section-padding pt-stack-md border-t border-outline-variant/20 grid grid-cols-1 sm:grid-cols-2 gap-stack-md fade-in-up delay-300">
+<div>
+<h3 class="font-label-caps text-label-caps text-on-surface-variant uppercase mb-base">Email</h3>
+<a class="font-body-md text-body-md text-primary hover:text-primary-fixed-dim transition-colors" href="mailto:hello@bakibar.ru">hello@bakibar.ru</a>
+</div>
+<div>
+<h3 class="font-label-caps text-label-caps text-on-surface-variant uppercase mb-base">Телефон</h3>
+<a class="font-body-md text-body-md text-primary hover:text-primary-fixed-dim transition-colors" href="tel:+79990000000">+7 (999) 000-00-00</a>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer Shared Component -->
+<footer class="bg-surface-container-lowest dark:bg-surface-container-lowest w-full py-section-padding px-margin-mobile md:px-gutter max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-start gap-stack-md border-t border-outline-variant/10">
+<div class="flex flex-col gap-stack-sm">
+<span class="font-display-lg text-headline-md text-primary dark:text-primary">БакиБар</span>
+<p class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant max-w-xs">© 2026 БакиБар. Все права защищены. Dark Luxury Health.</p>
+</div>
+<div class="flex flex-col md:flex-row gap-stack-sm md:gap-stack-md">
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors" href="#">Политика конфиденциальности</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors" href="#">Публичная оферта</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors" href="#">Доставка и оплата</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors" href="contacts.html">Контакты</a>
+</div>
+</footer>
+<script>
+        // Simple script to handle floating label effect if needed in future, 
+        // currently using standard placeholders for minimalism as requested by "editorial style".
+        // Add subtle parallax to image
+        document.addEventListener('scroll', () => {
+            const img = document.querySelector('img');
+            const scrolled = window.scrollY;
+            if(img && window.innerWidth > 1024) {
+                img.style.transform = `translateY(${scrolled * 0.15}px) scale(1.05)`;
+            }
+        });
+    </script>
+
+
+</body></html>

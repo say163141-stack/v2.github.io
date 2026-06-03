@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="ru"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>БакиБар — Энергия природы в каждом кусочке</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-highest": "#252525",
+                        "graphite-text": "#FFFFFF",
+                        "on-secondary-fixed": "#141f00",
+                        "secondary-fixed": "#d4eca2",
+                        "surface-container": "#1e1e1e",
+                        "on-background": "#FFFFFF",
+                        "secondary-fixed-dim": "#b8cf88",
+                        "on-secondary": "#ffffff",
+                        "on-surface": "#FFFFFF",
+                        "on-primary": "#ffffff",
+                        "on-primary-fixed-variant": "#ffdad6",
+                        "tertiary-fixed-dim": "#cfc6b3",
+                        "primary-fixed": "#ffdad6",
+                        "on-tertiary-fixed": "#1f1b10",
+                        "on-tertiary-container": "#a19988",
+                        "on-primary-container": "#ea7870",
+                        "surface-bright": "#2c2c2c",
+                        "secondary": "#89A44E",
+                        "background": "#121212",
+                        "on-primary-fixed": "#410003",
+                        "surface-container-high": "#2a2a2a",
+                        "surface-container-low": "#1a1a1a",
+                        "surface-dim": "#111111",
+                        "kraft-shadow": "#1a1a1a",
+                        "error-container": "#410002",
+                        "tertiary-fixed": "#ebe1cf",
+                        "inverse-on-surface": "#121212",
+                        "surface-tint": "#ffb3ad",
+                        "on-surface-variant": "#dcc0bd",
+                        "primary": "#ffb3ad",
+                        "on-error-container": "#ffdad6",
+                        "outline-variant": "#564240",
+                        "on-error": "#690005",
+                        "secondary-container": "#3b4d14",
+                        "tertiary": "#ebe1cf",
+                        "on-secondary-container": "#d4eca2",
+                        "inverse-surface": "#f1dedc",
+                        "inverse-primary": "#9f3f3a",
+                        "primary-container": "#7d2c29",
+                        "matcha-bright": "#89A44E",
+                        "surface": "#121212",
+                        "tertiary-container": "#4c4638",
+                        "on-secondary-fixed-variant": "#3b4d14",
+                        "outline": "#a08c8a",
+                        "on-tertiary": "#363124",
+                        "surface-variant": "#564240",
+                        "primary-fixed-dim": "#ffb3ad",
+                        "on-tertiary-fixed-variant": "#4c4638",
+                        "error": "#ffb4ab",
+                        "surface-container-lowest": "#0a0a0a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "stack-md": "48px",
+                        "margin-mobile": "20px",
+                        "container-max": "1280px",
+                        "stack-lg": "80px",
+                        "margin-desktop": "64px"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["Newsreader"],
+                        "body-md": ["Hanken Grotesk"],
+                        "body-lg": ["Hanken Grotesk"],
+                        "label-sm": ["Hanken Grotesk"],
+                        "headline-md": ["Newsreader"],
+                        "headline-lg-mobile": ["Newsreader"],
+                        "headline-lg": ["Newsreader"]
+                    },
+                    "fontSize": {
+                        "display-lg": ["64px", { "lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "headline-md": ["32px", { "lineHeight": "40px", "fontWeight": "500" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                        "headline-lg": ["48px", { "lineHeight": "56px", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .texture-overlay {
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.03'/%3E%3C/svg%3E");
+            pointer-events: none;
+            position: absolute;
+            inset: 0;
+            z-index: 10;
+        }
+        .bg-pattern-samara {
+            background-image: radial-gradient(#333 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+        .hero-gradient {
+            background: linear-gradient(to right, rgba(18, 18, 18, 0.95) 0%, rgba(18, 18, 18, 0.7) 50%, rgba(18, 18, 18, 0.4) 100%);
+        }
+        
+        /* Motion Improvements */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #ffdad6;
+            transition: width 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        @keyframes heroZoom {
+            from { transform: scale(1); }
+            to { transform: scale(1.1); }
+        }
+        .hero-zoom {
+            animation: heroZoom 20s ease-out forwards;
+        }
+
+        .btn-active:active {
+            transform: scale(0.96);
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .reveal, .hero-zoom, .btn-active, .nav-link::after {
+                animation: none !important;
+                transition: none !important;
+                transform: none !important;
+                opacity: 1 !important;
+            }
+        }
+    </style>
+</head>
+<body class="bg-[#121212] text-white font-body-md antialiased relative min-h-screen flex flex-col">
+<div class="texture-overlay"></div>
+<!-- Navigation -->
+<nav class="bg-transparent absolute top-0 left-0 right-0 z-50 transition-all duration-300">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-8 max-w-container-max mx-auto">
+<a class="font-display-lg text-headline-lg-mobile md:text-headline-lg font-bold text-white flex items-center gap-3 transition-transform hover:scale-105 active:scale-95" href="index.html">
+<span class="">БакиБар</span>
+</a>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-white font-bold border-b-2 border-primary-fixed/50 pb-1 font-label-sm text-label-sm tracking-widest uppercase" href="index.html">Главная</a>
+<a class="nav-link text-gray-300 hover:text-white transition-colors font-label-sm text-label-sm tracking-widest uppercase" href="catalog.html">Каталог</a>
+<a class="nav-link text-gray-300 hover:text-white transition-colors font-label-sm text-label-sm tracking-widest uppercase" href="about.html">О бренде</a>
+<a class="nav-link text-gray-300 hover:text-white transition-colors font-label-sm text-label-sm tracking-widest uppercase" href="b2b.html">B2B/Инвесторам</a>
+<a class="nav-link text-gray-300 hover:text-white transition-colors font-label-sm text-label-sm tracking-widest uppercase" href="sex.html">Секс</a>
+<a class="nav-link text-gray-300 hover:text-white transition-colors font-label-sm text-label-sm tracking-widest uppercase" href="where-to-buy.html">Где купить</a>
+<a class="nav-link text-gray-300 hover:text-white transition-colors font-label-sm text-label-sm tracking-widest uppercase" href="contacts.html">Контакты</a>
+</div>
+<button aria-label="Меню" class="md:hidden text-white p-2">
+<span class="material-symbols-outlined text-[32px]">menu</span>
+</button>
+</div>
+</nav>
+<main class="flex-grow">
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center overflow-hidden">
+<!-- Background Image -->
+<div class="absolute inset-0 z-0 overflow-hidden">
+<img alt="Atmospheric dark background with ingredients" class="w-full h-full object-cover hero-zoom" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5Nd75YyM0EH7L0sk4ITuB5I17aj2M4MC7vdtrayxp1JPVoDK9Z0fXv2nEa3EsT4VeAOMz2ILqhedM__m5HG0qQcVdZadloBWZrrc6gEzzZk2iU_kV0ljOYTE1e-qPrlOIVc8D5f14eY-Q2vHih7_9mhOmUXXuoelu8AJgfKQ7Fip9t44G1P8qcQ-8R1qtxZth2zZnLwimpd3XURLMrMr3EbgEHr3RncXeEsWgeUHEWqooscJB05KI2t5kZ-zQnJPB9BqIok6rJOXh"/>
+<div class="absolute inset-0 hero-gradient"></div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative z-10 w-full pt-20">
+<div class="max-w-3xl flex flex-col items-start gap-10 reveal active">
+<div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-secondary-fixed/10 text-secondary-fixed border border-secondary-fixed/20 font-label-sm text-[11px] uppercase tracking-[0.2em] backdrop-blur-md">
+<span aria-hidden="true" class="material-symbols-outlined text-[16px]">eco</span>
+                    100% Натурально
+                </div>
+<h1 class="font-display-lg text-headline-lg-mobile md:text-display-lg text-white leading-[1.1] drop-shadow-2xl">
+                    БакиБар — Энергия природы в каждом кусочке
+                </h1>
+<p class="font-body-lg text-body-lg text-gray-300 max-w-xl leading-relaxed">
+                    Натуральные фитнес-батончики ручной работы из самого сердца Самары. Идеальный баланс вкуса, витаминов и пользы для вашего активного дня.
+                </p>
+<div class="flex flex-wrap items-center gap-6 mt-4">
+<a class="px-10 py-5 bg-primary-fixed text-on-primary-fixed rounded-full hover:bg-white transition-all duration-300 font-label-sm text-label-sm font-bold flex items-center gap-3 shadow-xl hover:shadow-primary-fixed/40 btn-active" href="catalog.html">
+                        Смотреть каталог
+                        <span aria-hidden="true" class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Product Cards -->
+<section class="py-stack-lg px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto bg-[#121212]" id="catalog">
+<div class="text-center max-w-3xl mx-auto mb-20 reveal">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-white mb-6">Больше, чем просто перекус</h2>
+<p class="font-body-lg text-body-lg text-gray-400">
+                Каждый батончик БакиБар — это тщательно сбалансированный витаминно-минеральный комплекс, созданный на основе уникальных рецептур.
+            </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- Product 1 -->
+<div class="bg-[#1c1c1c] rounded-2xl p-8 flex flex-col items-center text-center group hover:bg-[#252525] transition-all duration-300 border border-white/5 relative hover:scale-[1.02] hover:shadow-[0_0_30px_rgba(255,179,173,0.1)] reveal">
+<div class="w-full aspect-[3/4] mb-8 relative">
+<img alt="Макадамия" class="w-full h-full object-contain transform group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuApP2j53HIvxH8OxOD-k_PrhlFlSs7s9Fdb9y15fmXAXsZZR9kdOqdW0oZzktZ3ul-h3OYn66KVmPjIEc7nAYxg9PAHCwHJMJ9BoIDhogIzcP8NIlj8aXOxqHyyCdWBLNVbolb25jIHFIO6hyfiSTeeXQkfvLUkwhPUn5yRbO-VMNX0pRqwkCH01b1UnpGurqgqqdFJgXHR9-PL7Eh9AskRDeo4wJRuiZ1mWv04-pswnsS9B0-SIgxwVCuLl0SRGVStZ_MnJVS7wYvr"/>
+</div>
+<h3 class="font-headline-md text-[24px] text-white mb-3">Макадамия</h3>
+<p class="font-body-md text-sm text-gray-400 mb-6 flex-grow">Богатый вкус королевского ореха для настоящих гурманов.</p>
+<div class="inline-flex items-center gap-2 text-secondary-fixed font-label-sm text-[10px] uppercase tracking-widest border border-secondary-fixed/20 px-3 py-1 rounded-full">
+<span class="material-symbols-outlined text-[14px]">local_fire_department</span> Высокий белок
+                </div>
+</div>
+<!-- Product 2 -->
+<div class="bg-[#1c1c1c] rounded-2xl p-8 flex flex-col items-center text-center group hover:bg-[#252525] transition-all duration-300 border border-white/5 relative hover:scale-[1.02] hover:shadow-[0_0_30px_rgba(255,179,173,0.1)] reveal" style="transition-delay: 100ms">
+<div class="w-full aspect-[3/4] mb-8 relative">
+<img alt="Паста Амосова" class="w-full h-full object-contain transform group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAT-0KAym0Ag0lerlskAh4uX69t3Yv9BejCsF00o6YWzeNfZ985uUdNFcnua2IHaZd9FggobVkrh0rd3EPWK4J0tHAP5tZ1JqsqeyGyGcS60aUixUoVyF0N-267SX5tfp4prXGJ8NJ_2SACzItqxLyTQNVHuS_ZMsTuAFsb-G7wdf4HSq-HXgle2pJNpobeb_imSTF_803W-NG8ht_h35jdCm9cqoEEmQ8lH4CvW-wCFeQqYlTw7oFqKz1VjVmu7CoS6pYit2gw_IOy"/>
+</div>
+<h3 class="font-headline-md text-[24px] text-white mb-3">Паста Амосова</h3>
+<p class="font-body-md text-sm text-gray-400 mb-6 flex-grow">Классический рецепт здоровья и долголетия в удобном формате.</p>
+<div class="inline-flex items-center gap-2 text-secondary-fixed font-label-sm text-[10px] uppercase tracking-widest border border-secondary-fixed/20 px-3 py-1 rounded-full">
+<span class="material-symbols-outlined text-[14px]">health_and_safety</span> Иммунитет
+                </div>
+</div>
+<!-- Product 3 -->
+<div class="bg-[#1c1c1c] rounded-2xl p-8 flex flex-col items-center text-center group hover:bg-[#252525] transition-all duration-300 border border-white/5 relative hover:scale-[1.02] hover:shadow-[0_0_30px_rgba(255,179,173,0.1)] reveal" style="transition-delay: 200ms">
+<div class="w-full aspect-[3/4] mb-8 relative">
+<img alt="Фисташка, Матча" class="w-full h-full object-contain transform group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeql_gn-m5WRZ_HqAOOW8Qua2e7P2_X2rxKgldcRGNUbObx39Bkm7HHR3T25SQYlDN6OvBhlzQ2B-o6sHgO3EexIZZ9L6qtSxk2MqHyopeBfeFPnQ7pn2LCyjSeHA4NAJ_BLy3PmxfrdkOCLOoa1-UN403pVJVNidDd9XXgc-e_LzwGm5I6hcqciEt1A68TfBR_iMKSMqKLtRXlZ19TQU35jFW6UkkREEZpX9vd98-zmDeNytI_O_2aHOz6cTLWiDh6ImI5k6583E9"/>
+</div>
+<h3 class="font-headline-md text-[24px] text-white mb-3">Фисташка, Матча</h3>
+<p class="font-body-md text-sm text-gray-400 mb-6 flex-grow">Изысканное сочетание для антиоксидантной защиты и тонуса.</p>
+<div class="inline-flex items-center gap-2 text-secondary-fixed font-label-sm text-[10px] uppercase tracking-widest border border-secondary-fixed/20 px-3 py-1 rounded-full">
+<span class="material-symbols-outlined text-[14px]">psychology</span> Фокус
+                </div>
+</div>
+<!-- Product 4 -->
+<div class="bg-[#1c1c1c] rounded-2xl p-8 flex flex-col items-center text-center group hover:bg-[#252525] transition-all duration-300 border border-white/5 relative hover:scale-[1.02] hover:shadow-[0_0_30px_rgba(255,179,173,0.1)] reveal" style="transition-delay: 300ms">
+<div class="w-full aspect-[3/4] mb-8 relative">
+<img alt="Марципан, цукаты, инжир" class="w-full h-full object-contain transform group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBG_hMFbU12XqMgBmqpwNdldAd4Ok_Yn6ax8hXYeH9vEU5iMPHqPrB95pjB8T-R7LaozDY7JZnyhhKahKZIqb5aRybWQwuGifHVjnj_hZI2VDywOFCOBp_pDZcMSjHJPoCD7kDiH7IDO641PHyyKJUGBqUWCkJZJlSBD6xDecHo-DWHG49lp60S8eu5ZphMh-cvY7pDqo3GXBJy2o2jEWO4Os1ZEnlYPIb9hmPF-IQ92M4344O7KYV8Pi8gw_Ba1oA5CB5LnaOTUC0x"/>
+</div>
+<h3 class="font-headline-md text-[24px] text-white mb-3">Марципан и Инжир</h3>
+<p class="font-body-md text-sm text-gray-400 mb-6 flex-grow">Благородная сладость без добавления сахара.</p>
+<div class="inline-flex items-center gap-2 text-secondary-fixed font-label-sm text-[10px] uppercase tracking-widest border border-secondary-fixed/20 px-3 py-1 rounded-full">
+<span class="material-symbols-outlined text-[14px]">mood</span> Настроение
+                </div>
+</div>
+</div>
+</section>
+<!-- Advantages Section -->
+<section class="py-stack-lg bg-[#1a1a1a] relative overflow-hidden">
+<div class="absolute inset-0 bg-pattern-samara opacity-10"></div>
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative z-10">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+<div class="reveal">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-white mb-16">Преимущества, которые чувствуешь</h2>
+<div class="space-y-12">
+<div class="flex gap-8 group">
+<div class="flex-shrink-0 w-16 h-16 rounded-2xl bg-white/5 border border-white/10 text-secondary-fixed flex items-center justify-center group-hover:bg-secondary-fixed/10 group-hover:border-secondary-fixed/30 transition-colors">
+<span class="material-symbols-outlined text-[32px]">nutrition</span>
+</div>
+<div>
+<h3 class="font-headline-md text-[24px] text-white mb-3">Натуральный состав</h3>
+<p class="font-body-md text-gray-400 leading-relaxed">Никакого добавленного сахара, консервантов или искусственных красителей. Только отборные орехи и суперфуды.</p>
+</div>
+</div>
+<div class="flex gap-8 group">
+<div class="flex-shrink-0 w-16 h-16 rounded-2xl bg-white/5 border border-white/10 text-secondary-fixed flex items-center justify-center group-hover:bg-secondary-fixed/10 group-hover:border-secondary-fixed/30 transition-colors">
+<span class="material-symbols-outlined text-[32px]">bolt</span>
+</div>
+<div>
+<h3 class="font-headline-md text-[24px] text-white mb-3">Заряд энергии</h3>
+<p class="font-body-md text-gray-400 leading-relaxed">Идеальное топливо для интенсивных тренировок и продуктивной работы без резких скачков сахара.</p>
+</div>
+</div>
+<div class="flex gap-8 group">
+<div class="flex-shrink-0 w-16 h-16 rounded-2xl bg-white/5 border border-white/10 text-secondary-fixed flex items-center justify-center group-hover:bg-secondary-fixed/10 group-hover:border-secondary-fixed/30 transition-colors">
+<span class="material-symbols-outlined text-[32px]">monitor_heart</span>
+</div>
+<div>
+<h3 class="font-headline-md text-[24px] text-white mb-3">Польза для здоровья</h3>
+<p class="font-body-md text-gray-400 leading-relaxed">Рецепты разработаны нутрициологами для поддержки иммунитета и поддержания жизненного тонуса.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="relative reveal" style="transition-delay: 200ms">
+<div class="absolute -inset-10 bg-secondary-fixed/5 rounded-full blur-[100px] pointer-events-none"></div>
+<img alt="Ингредиенты БакиБар" class="w-full h-auto rounded-[32px] shadow-2xl relative z-10 grayscale-[0.2] contrast-[1.1] transition-transform duration-700 hover:scale-[1.03]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-KWg6AQPD14khshFbMOQTYjFxeGBoF9dVL0EjKCJBZtCCj6FGBk1-FcCN_M9bVtvGvhGVCA4Aqy9qcB3eJsaNAAM9Q3k3tI3id2aWDXtSQgzfL0AFgdohBhX18LYQICZG7IPHw7U_0SevAGvRhQxyW4ohzekyuESNwOiVw9mlNwyvguaMUnxfGp7pGYG4d4mKvBG0nK7gZneYDUjVQ6jizArQqPup2ClrHCe4VkvnzhYyvv9IIMM8ztmd6mKKGCYT2JLtB0sadgyk"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Video Reviews Section -->
+<section class="py-stack-lg px-margin-mobile md:px-margin-desktop bg-[#121212]">
+<div class="max-w-container-max mx-auto">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-white text-center mb-20 reveal">Видео-отзывы</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+<!-- Review 1 -->
+<div class="bg-[#1c1c1c] rounded-[32px] border border-white/10 overflow-hidden flex flex-col group cursor-pointer hover:bg-[#252525] hover:border-primary-fixed/30 transition-all duration-300 reveal">
+<div class="relative aspect-video bg-black/40">
+<img alt="Видео отзыв 1" class="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHRGrkILc_3iMlzwAuwYv_lnrKvv1ezadqic0i90gGnqCfF9GXsTxxNFRIROC9oYpoJwCBEtqbRssgrSlbgRI-gzJbrU-qebzuf5Rsk2Ny72wpLrcKuKSU4XUtCoAogYb6vs3IhB-AzQLGTO22M-hO-hDl9ehgO_nNa5Mtr4h3v2DVG1RzbXRTMC19tHrSs0u8Mk3aV43ZDi944E6wQtgRKNiIduab-u7UZE6AJltmotFDdL5caJHP-HCZa75AGomqXcv_dJOd6pEP"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="w-16 h-16 bg-white/10 backdrop-blur-md rounded-full border border-white/20 flex items-center justify-center group-hover:bg-primary-fixed group-hover:border-transparent transition-all group-hover:scale-110 duration-500">
+<span class="material-symbols-outlined text-white text-4xl group-hover:text-[#121212]">play_arrow</span>
+</div>
+</div>
+</div>
+<div class="p-8">
+<p class="font-body-md text-gray-300 italic mb-8 leading-relaxed">"Идеальный перекус после тренировки. Натуральный состав и потрясающий вкус, особенно макадамия!"</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full border border-white/10 overflow-hidden">
+<img alt="Алексей М." class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXqtwviE4BxNxZQWNILs1mRKJDl2ZYC4WzlflcxkNICUUUVprxl3bzWdXd6spbeL7Xj-_nBlirX-ymj0baP4yk9tBypojoskQbl0tMLxanTnJR3bIAjv2bMTWD9Z79ryPR1i7aD-P6cK21dVMBm60kBBacRrh0DCvBgP0g7uHfn9idVB7_sjDEb2Tk1p6zVxzX4KiYgCs4JWytGT50ccVXzQ4Xe8_bpvRrX7E8Hivq1jgJlmCidaAPxv_ZAOdJlnQ7UecryAh76yQ2"/>
+</div>
+<div>
+<h4 class="font-body-md font-bold text-white">Алексей М.</h4>
+<p class="font-label-sm text-[10px] uppercase tracking-widest text-gray-500">Кроссфит-атлет</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Review 2 -->
+<div class="bg-[#1c1c1c] rounded-[32px] border border-white/10 overflow-hidden flex flex-col group cursor-pointer hover:bg-[#252525] hover:border-primary-fixed/30 transition-all duration-300 reveal" style="transition-delay: 100ms">
+<div class="relative aspect-video bg-black/40">
+<img alt="Видео отзыв 2" class="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcGwoh9AKhbjFlFPv-W7mNngfUIU81OL6lf8_oSG1dQ_-WtsH3ueRamD5O7bJ5gWkAUIK3vzn-nxjeW22ty7yTr3uXaPi9a_xrtuQ2YD-1MW-wcviR7IdHCVI5wMN6oG3g8KCNabyJ7WRJES8TWTTr8t_rasygLqB7ikv400fJzwXVvadeSbT8hkAHKJEUmuQrJvFg71eT25M8xD-YDqY9LI5PqDqa_YCBGrPoxKFnuAJGPTZ4_UaHd7Vv8RMbP3OiP3OchGekRCzv"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="w-16 h-16 bg-white/10 backdrop-blur-md rounded-full border border-white/20 flex items-center justify-center group-hover:bg-primary-fixed group-hover:border-transparent transition-all group-hover:scale-110 duration-500">
+<span class="material-symbols-outlined text-white text-4xl group-hover:text-[#121212]">play_arrow</span>
+</div>
+</div>
+</div>
+<div class="p-8">
+<p class="font-body-md text-gray-300 italic mb-8 leading-relaxed">"Даю эти батончики детям в школу вместо шоколадок. Вкусно, полезно и я спокойна за их здоровье."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full border border-white/10 overflow-hidden">
+<img alt="Мария С." class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKhHeZRkpO5mOak3u-NlSrpm6Jl5VTpDURE3bHh53IL-olqSzrWxL2OC2ZjcJc7WiGViwdWjUjRTBUWmQB3rvd5Mf8toigHgnCwT8ZJUqB7HB3BAwylkwxh8m3PuDj_7O70Uy1TSOvGgCJQyfmGQtGGs8mjj38xfdQs5DLtVS2xusoK5bDk2Q5yTiS0rHmATvxL1ynVvaHYsUCg75vNgv1A_Lbw_230ZxKC9z1Xwy1f_rVvj3dpHRDWGpRveOhAyHhNIROg3comzXC"/>
+</div>
+<div>
+<h4 class="font-body-md font-bold text-white">Мария С.</h4>
+<p class="font-label-sm text-[10px] uppercase tracking-widest text-gray-500">Мама двоих детей</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Review 3 -->
+<div class="bg-[#1c1c1c] rounded-[32px] border border-white/10 overflow-hidden flex flex-col group cursor-pointer hover:bg-[#252525] hover:border-primary-fixed/30 transition-all duration-300 reveal" style="transition-delay: 200ms">
+<div class="relative aspect-video bg-black/40">
+<img alt="Видео отзыв 3" class="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUihnRECN4FFFyl8Q2s8LkToBezZEXfGXw8dU3zWxK_gjlqWQAnwMeKorPgUlUntFfAwtqJBbjUvRsgyhz57DrfnLSm7YAWwvZMlGRxSmQUkPqhpX6bKjmS83e-mbDk8oTe77Xa2T5BvqjKKnMOk0PRh7c1CYaZMjhmuKgOmXdAuDyZslee-ZnUkhGE0cDioRWMi4bw5mQMzvi7pJomwuKw-F4m6GSN16K0lpNru4XrMHjK49hwgNf2JiksSuZFud810HZXMRm9v6X"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="w-16 h-16 bg-white/10 backdrop-blur-md rounded-full border border-white/20 flex items-center justify-center group-hover:bg-primary-fixed group-hover:border-transparent transition-all group-hover:scale-110 duration-500">
+<span class="material-symbols-outlined text-white text-4xl group-hover:text-[#121212]">play_arrow</span>
+</div>
+</div>
+</div>
+<div class="p-8">
+<p class="font-body-md text-gray-300 italic mb-8 leading-relaxed">"Отличный заряд энергии в офисе, когда нет времени на полноценный обед. Паста Амосова - мой фаворит!"</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full border border-white/10 overflow-hidden">
+<img alt="Дмитрий К." class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2v_awvnHPOMsFMmUBBFrMjWcTm4V1ak4EmNnaEdcEfR5HSyj1-fthue5SZep_yBQqGIhMEiFX6od6XG_Bu5oNf9GofzIc-_e9C-rV8ag2JR2KiT83mVq1METNZZa59f2RVf_qgYTr6v86jvuQ1aBMP9P2jx4AICaLjboVPTk_Q3igjpy8vEb7lB4quLOXPhsWvRyvDuQLRWSwtI3fxfkBEXm2tw_TDkMcjKrO6EngeRzI1VhIoKeZZBqEc2l6t2MKSv7dt9pP52q_"/>
+</div>
+<div>
+<h4 class="font-body-md font-bold text-white">Дмитрий К.</h4>
+<p class="font-label-sm text-[10px] uppercase tracking-widest text-gray-500">IT-специалист</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-stack-lg px-margin-mobile md:px-margin-desktop text-center bg-[#1a1a1a] relative overflow-hidden">
+<div class="relative z-10 reveal">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-white mb-8 max-w-4xl mx-auto">
+                Попробуйте энергию Самары на вкус
+            </h2>
+<p class="font-body-lg text-body-lg text-gray-400 max-w-2xl mx-auto mb-12">
+                Закажите свой первый набор фитнес-батончиков БакиБар прямо сейчас и почувствуйте разницу.
+            </p>
+<a class="inline-flex px-12 py-6 bg-primary-fixed text-[#121212] rounded-full hover:scale-105 transition-all duration-300 font-label-sm text-[14px] font-bold items-center gap-3 shadow-2xl shadow-primary-fixed/20 btn-active" href="catalog.html">
+<span aria-hidden="true" class="material-symbols-outlined text-[24px]">shopping_bag</span>
+                Выбрать вкус
+            </a>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#0a0a0a] text-gray-400 border-t border-white/5">
+<div class="w-full px-margin-mobile md:px-margin-desktop py-20 grid grid-cols-1 md:grid-cols-3 gap-16 max-w-container-max mx-auto">
+<div class="flex flex-col items-start gap-6">
+<a class="flex items-center gap-3 transition-transform hover:scale-105" href="index.html">
+<span class="font-display-lg text-headline-md md:text-display-lg text-white font-bold leading-none">БакиБар</span>
+</a>
+<p class="font-body-md text-sm leading-relaxed max-w-xs">Энергия природы в каждом кусочке. Натуральные батончики из самого сердца Самары.</p>
+</div>
+<div class="flex flex-col gap-6 font-body-md">
+<h4 class="text-white font-bold uppercase tracking-widest text-xs">Контакты</h4>
+<div class="space-y-4">
+<a class="hover:text-white transition-colors flex items-center gap-3 group" href="tel:+79264500383">
+<span class="material-symbols-outlined text-[20px] text-primary-fixed group-hover:scale-110 transition-transform">phone</span>
+                    +79264500383
+                </a>
+<a class="hover:text-white transition-colors flex items-center gap-3 group" href="mailto:bakibar@bk.ru">
+<span class="material-symbols-outlined text-[20px] text-primary-fixed group-hover:scale-110 transition-transform">mail</span>
+                    bakibar@bk.ru
+                </a>
+<a class="hover:text-white transition-colors flex items-center gap-3 group" href="https://t.me/bakibar_">
+<span class="material-symbols-outlined text-[20px] text-primary-fixed group-hover:scale-110 transition-transform">alternate_email</span>
+                    @bakibar_
+                </a>
+</div>
+</div>
+<div class="flex flex-col md:items-end justify-end font-label-sm text-label-sm text-gray-600 gap-2"><p>© 2026 БакиБар. Самара.</p><p>Все права защищены.</p></div>
+</div>
+</footer>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // Intersection Observer for Scroll Reveals
+        const observerOptions = {
+            threshold: 0.15,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    // Once animated, we don't need to observe it anymore
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        const revealElements = document.querySelectorAll('.reveal');
+        revealElements.forEach(el => observer.observe(el));
+
+        // Parallax effect for Hero Background
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const heroImage = document.querySelector('.hero-zoom');
+            if (heroImage) {
+                heroImage.style.transform = `scale(${1 + scrolled * 0.0001}) translateY(${scrolled * 0.1}px)`;
+            }
+        });
+
+        // Sticky Navbar background appearance
+        const nav = document.querySelector('nav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                nav.classList.add('bg-[#121212]/90', 'backdrop-blur-md', 'shadow-xl');
+                nav.classList.remove('bg-transparent');
+            } else {
+                nav.classList.remove('bg-[#121212]/90', 'backdrop-blur-md', 'shadow-xl');
+                nav.classList.add('bg-transparent');
+            }
+        });
+    });
+</script>
+</body></html>

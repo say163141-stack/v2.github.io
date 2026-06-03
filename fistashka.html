@@ -1,0 +1,221 @@
+<!DOCTYPE html><html lang="ru"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>БакиБар - Фисташка | Атлетический Минимализм</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&amp;family=Manrope:wght@400;600&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary": "#455E14", // Refined pistachio green
+                        "secondary": "#89A44E", // Matcha accent
+                        "surface": "#FFFFFF",
+                        "background": "#F9FAFB", // Light airy gray
+                        "on-background": "#1A1A1A",
+                        "on-surface-variant": "#4B5563",
+                        "outline": "#E5E7EB"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0px",
+                        "lg": "8px",
+                        "xl": "16px",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-lg": "80px",
+                        "container-max": "1200px",
+                        "margin-desktop": "40px",
+                        "stack-md": "48px",
+                        "margin-mobile": "20px",
+                        "gutter": "32px"
+                    },
+                    "fontFamily": {
+                        "display": ["Playfair Display", "serif"],
+                        "body": ["Manrope", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+            color: #455E14;
+        }
+        body { font-family: 'Manrope', sans-serif; }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+    </style>
+</head>
+<body class="bg-background text-on-background antialiased selection:bg-primary/10">
+<!-- TopNavBar -->
+<nav class="w-full bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-outline">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-5 flex justify-between items-center">
+<a class="text-3xl font-display font-bold text-primary tracking-tight" href="index.html">БакиБар</a>
+<div class="hidden lg:flex space-x-10 items-center">
+<a class="text-xs font-semibold uppercase tracking-widest text-on-background hover:text-primary transition-colors" href="index.html">Главная</a>
+<a class="text-xs font-semibold uppercase tracking-widest text-on-background hover:text-primary transition-colors" href="catalog.html">Каталог</a>
+<a class="text-xs font-semibold uppercase tracking-widest text-on-background hover:text-primary transition-colors" href="about.html">О бренде</a>
+<a class="text-xs font-semibold uppercase tracking-widest text-on-background hover:text-primary transition-colors" href="b2b.html">B2B/Инвесторам</a>
+<a class="text-xs font-semibold uppercase tracking-widest text-on-background hover:text-primary transition-colors" href="sex.html">Секс</a>
+<a class="text-xs font-semibold uppercase tracking-widest text-on-background hover:text-primary transition-colors" href="contacts.html">Контакты</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2"><span class="material-symbols-outlined">shopping_bag</span></button>
+<button class="lg:hidden p-2"><span class="material-symbols-outlined">menu</span></button>
+</div>
+</div>
+</nav>
+<main class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<!-- Hero Section -->
+<section class="py-stack-lg flex flex-col lg:flex-row gap-gutter items-center">
+<div class="w-full lg:w-1/2 order-2 lg:order-1">
+<div class="flex gap-3 mb-8">
+<span class="px-4 py-1 border border-primary text-primary rounded-full text-[10px] font-bold uppercase tracking-tighter">Высокий Белок</span>
+<span class="px-4 py-1 border border-primary text-primary rounded-full text-[10px] font-bold uppercase tracking-tighter">Японская Матча</span>
+</div>
+<h1 class="text-5xl md:text-7xl font-display text-on-background leading-tight mb-8">
+                    Фисташка — Энергия для Мышц и Тонуса
+                </h1>
+<p class="text-lg text-on-surface-variant leading-relaxed mb-10 max-w-lg">
+                    Фисташка и миндаль — это не только полезные жиры, но и растительный белок. Покрыты Матчей с Какао-маслом — японский суперфуд для чистой энергии.
+                </p>
+<!-- Highlights Grid -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<div class="p-6 border border-outline bg-white text-center">
+<span class="material-symbols-outlined text-3xl block mb-2">psychiatry</span>
+<p class="text-[10px] font-bold uppercase text-primary">L-теанин</p>
+</div>
+<div class="p-6 border border-outline bg-white text-center">
+<span class="material-symbols-outlined text-3xl block mb-2">fitness_center</span>
+<p class="text-[10px] font-bold uppercase text-primary">Аргинин</p>
+</div>
+<div class="p-6 border border-outline bg-white text-center">
+<span class="material-symbols-outlined text-3xl block mb-2">favorite</span>
+<p class="text-[10px] font-bold uppercase text-primary">Цинк</p>
+</div>
+<div class="p-6 border border-outline bg-white text-center">
+<span class="material-symbols-outlined text-3xl block mb-2">vital_signs</span>
+<p class="text-[10px] font-bold uppercase text-primary">В, E, K</p>
+</div>
+</div>
+</div>
+<div class="w-full lg:w-1/2 order-1 lg:order-2 relative">
+<div class="aspect-[4/5] overflow-hidden bg-gray-100 group">
+<img alt="Tennis player lifestyle" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpWg46cdf5XupycJnqnaq_tBN7BzsgsJYXkkQt9-6BcNfYZM4ptj2bcjWDc5Vwoo-hOyToFgdWoH_mD0Ij4tPs8ms3zYtEFDUDemaCkd50g9iF4WTEABMoFWI1rXPzOH-jT3tsEO1f7IEnRrOdP8nCPLZbQLGSDL36pd0aYMao8kv4eCIozdhQ7e7JnkIteueO-0QaKrWnNJZ-St6X2XNnUJkAU2aCW_oD8Mio1_tAkuq8PBO4IRjnBUvHE5SmQvpZxnCy-3EJzpSR">
+</div>
+<!-- Float Package -->
+
+</div>
+</section>
+<!-- Product & Nutrition Bento -->
+<section class="py-stack-lg border-t border-outline">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<!-- Interior Image -->
+<div class="lg:col-span-6 bg-gray-50 overflow-hidden border border-outline">
+<img alt="Product interior" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvQ7a1MwK1g_M-ZmvBLKV5YK3SrmgGwx6pCz5Z6cC-h1b5MWbxDSZ1MKIihcqclQPcn9-nXDRm-Qa2k6JDEd7bHbMq762y7lRan5QoM1mIBPzTtejupo-49bBu-WDZnSzwE-uLB-z7qMH2CdtekB3XVihcbkows74D_DKEWF5qX09x8CGFg4A04XydSq0JO_wcYqxjlpPPEiQ-UqwmIowR0pQ52nGqM_wmoxR-G_Ieqq4rHuZTt2q87hc8LZgQ_urnS8gA5CiS5NW1">
+</div>
+<!-- Composition -->
+<div class="lg:col-span-6 flex flex-col gap-8">
+<div class="p-10 bg-white border border-outline flex-grow">
+<h2 class="text-3xl font-display mb-6">Чистый Состав</h2>
+<p class="text-lg text-on-surface-variant leading-relaxed mb-8">
+                            Фисташка очищенная, шоколад белый без сахара, миндаль, какао масло, фисташковая паста, масло растительное, матча.
+                        </p>
+<div class="flex flex-wrap gap-8">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined !text-primary">verified</span>
+<span class="text-sm font-semibold">Срок годности: 3 месяца</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined !text-primary">scale</span>
+<span class="text-sm font-semibold">Вес: 45 г</span>
+</div>
+</div>
+</div>
+<!-- Nutrition -->
+<div class="p-10 border border-primary/20 bg-primary/5">
+<h3 class="text-xl font-display mb-8 flex justify-between items-center">
+                            Пищевая ценность
+                            <span class="text-[10px] font-bold uppercase tracking-widest text-primary/60">на 45 г</span>
+</h3>
+<div class="grid grid-cols-4 gap-4">
+<div>
+<p class="text-[10px] font-bold uppercase text-primary/60 mb-1">Белки</p>
+<p class="text-2xl font-display">9 г</p>
+</div>
+<div>
+<p class="text-[10px] font-bold uppercase text-primary/60 mb-1">Жиры</p>
+<p class="text-2xl font-display">21 г</p>
+</div>
+<div>
+<p class="text-[10px] font-bold uppercase text-primary/60 mb-1">Углеводы</p>
+<p class="text-2xl font-display">8 г</p>
+</div>
+<div>
+<p class="text-[10px] font-bold uppercase text-primary/60 mb-1">Калории</p>
+<p class="text-2xl font-display">250</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Secondary Info Section -->
+<section class="py-stack-lg border-t border-outline grid grid-cols-1 lg:grid-cols-2 gap-gutter items-center">
+<div class="space-y-8">
+<h2 class="text-4xl font-display leading-tight">Синергия Красоты и Здоровья</h2>
+<div class="space-y-6 text-on-surface-variant text-lg leading-relaxed">
+<p class="">
+                        Фисташка и японская матча — это мощный дуэт для тех, кто заботится о своей форме. Матча ускоряет метаболизм и дарит антиоксидантную защиту, сохраняя молодость кожи и тонус организма.
+                    </p>
+<p class="">
+                        Фисташки, богатые витаминами группы B и E, поддерживают здоровье сердца и способствуют быстрому восстановлению мышц после физических нагрузок. Этот батончик не просто перекус, а инвестиция в вашу энергию и естественную красоту.
+                    </p>
+</div>
+<div class="flex gap-10 pt-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined !text-secondary">energy_savings_leaf</span>
+<span class="text-xs font-bold uppercase tracking-widest">Чистая энергия</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined !text-secondary">auto_awesome</span>
+<span class="text-xs font-bold uppercase tracking-widest">Антиоксиданты</span>
+</div>
+</div>
+</div>
+<div class="bg-gray-50 border border-outline p-4">
+<img alt="Product Packaging" class="w-full h-auto max-w-sm mx-auto transform rotate-6" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUrvDyYWEvS9dNvU4A6e2AoPIhsAiP27eoKOspCApktgdmjZPnzQNyHwGJkbuMkfgI7X2kd5yJgml-oXeNkQIROyLVUHdHCilqP8RSCZ-gAKeDK0479qC5Iu8SWjOpxNSRXh-mT-k-2VCtfASv_uRYajH-zyOV5CKltuBPWbX2X6ObkuwAVAF83uMLmeZCDNIHON611ivWQvMh5-CGU7BZOoO7bqp2zlbwXdjTjquA56Ru1rsbESJ1qs8R160H38FD3OhQGLBiR2B3">
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-white border-t border-outline mt-stack-lg">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-20 flex flex-col md:flex-row justify-between items-start gap-12">
+<div>
+<span class="text-4xl font-display font-bold text-primary block mb-6">БакиБар</span>
+<p class="text-sm text-on-surface-variant max-w-xs">
+                    © 2026 БакиБар. Самара.<br>Все права защищены.
+                </p>
+</div>
+<div class="grid grid-cols-1 gap-4 text-right">
+<a class="text-lg hover:text-primary transition-colors flex items-center justify-end gap-3" href="tel:+79264500383">
+<span class="material-symbols-outlined text-sm">phone</span> +79264500383
+                </a>
+<a class="text-lg hover:text-primary transition-colors flex items-center justify-end gap-3" href="mailto:bakibar@bk.ru">
+<span class="material-symbols-outlined text-sm">mail</span> bakibar@bk.ru
+                </a>
+<a class="text-lg hover:text-primary transition-colors flex items-center justify-end gap-3" href="https://t.me/bakibar_">
+<span class="material-symbols-outlined text-sm">alternate_email</span> @bakibar_
+                </a>
+</div>
+</div>
+</footer>
+
+
+</body></html>

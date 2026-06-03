@@ -1,0 +1,366 @@
+<!DOCTYPE html><html class="dark" lang="ru"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>БакиБар | Секс &amp; Энергия</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&amp;family=Manrope:wght@400;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(32, 31, 31, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(212, 175, 55, 0.1);
+        }
+        .parallax-bg {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .texture-overlay {
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.03'/%3E%3C/svg%3E");
+            pointer-events: none;
+            position: absolute;
+            inset: 0;
+            z-index: 10;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-surface-variant": "#d0c5af",
+                        "error-container": "#93000a",
+                        "on-error-container": "#ffdad6",
+                        "primary": "#d4af37",
+                        "on-tertiary-container": "#454544",
+                        "surface-container-high": "#2a2a2a",
+                        "primary-container": "#d4af37",
+                        "surface": "#131313",
+                        "on-tertiary-fixed": "#1c1b1b",
+                        "on-surface": "#e5e2e1",
+                        "tertiary-fixed": "#e5e2e1",
+                        "secondary-container": "#574238",
+                        "secondary": "#dec1b3",
+                        "on-tertiary-fixed-variant": "#474746",
+                        "on-primary": "#3c2f00",
+                        "surface-container-highest": "#353534",
+                        "surface-tint": "#e9c349",
+                        "primary-fixed": "#ffe088",
+                        "on-secondary-fixed": "#281810",
+                        "surface-container-low": "#1c1b1b",
+                        "secondary-fixed": "#fbdcce",
+                        "on-secondary-fixed-variant": "#574238",
+                        "on-primary-fixed": "#241a00",
+                        "inverse-primary": "#735c00",
+                        "primary-fixed-dim": "#e9c349",
+                        "tertiary-container": "#b4b2b2",
+                        "surface-container-lowest": "#0e0e0e",
+                        "outline-variant": "#4d4635",
+                        "on-primary-fixed-variant": "#574500",
+                        "inverse-on-surface": "#313030",
+                        "on-primary-container": "#554300",
+                        "on-error": "#690005",
+                        "error": "#ffb4ab",
+                        "tertiary-fixed-dim": "#c8c6c5",
+                        "on-secondary": "#3f2c23",
+                        "secondary-fixed-dim": "#dec1b3",
+                        "on-secondary-container": "#cbafa2",
+                        "surface-bright": "#3a3939",
+                        "surface-dim": "#131313",
+                        "tertiary": "#d0cdcd",
+                        "outline": "#99907c",
+                        "on-tertiary": "#313030",
+                        "surface-variant": "#353534",
+                        "on-background": "#e5e2e1",
+                        "inverse-surface": "#e5e2e1",
+                        "surface-container": "#201f1f",
+                        "background": "#131313"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "container-max": "1280px",
+                        "base": "8px",
+                        "section-padding": "120px",
+                        "stack-sm": "16px",
+                        "stack-md": "32px",
+                        "stack-lg": "64px",
+                        "margin-mobile": "20px"
+                    },
+                    "fontFamily": {
+                        "button": ["Manrope"],
+                        "display-lg": ["Playfair Display"],
+                        "body-lg": ["Manrope"],
+                        "label-caps": ["Manrope"],
+                        "body-md": ["Manrope"],
+                        "headline-md": ["Playfair Display"],
+                        "display-lg-mobile": ["Playfair Display"]
+                    },
+                    "fontSize": {
+                        "button": ["14px", {"lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0.01em", "fontWeight": "400"}],
+                        "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.15em", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "display-lg-mobile": ["40px", {"lineHeight": "1.2", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-surface font-body-md antialiased relative">
+<div class="texture-overlay"></div>
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-gutter max-w-container-max mx-auto h-20 bg-surface/80 backdrop-blur-md border-b border-outline-variant/20">
+<a class="font-display-lg text-headline-md text-primary tracking-tighter" href="index.html">БакиБар</a>
+<nav class="hidden md:flex gap-8"><a class="font-button text-button uppercase text-on-surface hover:text-primary transition-colors" href="index.html">Главная</a><a class="font-button text-button uppercase text-on-surface hover:text-primary transition-colors" href="catalog.html">Каталог</a><a class="font-button text-button uppercase text-on-surface hover:text-primary transition-colors" href="about.html">О бренде</a><a class="font-button text-button uppercase text-on-surface hover:text-primary transition-colors" href="b2b.html">B2B/Инвесторам</a><a class="font-button text-button uppercase text-primary border-b-2 border-primary pb-1" href="sex.html">Секс</a><a class="font-button text-button uppercase text-on-surface hover:text-primary transition-colors" href="contacts.html">Контакты</a><a class="font-button text-button uppercase text-on-surface hover:text-primary transition-colors" href="where-to-buy.html">Где купить</a></nav>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary cursor-pointer md:hidden">menu</span>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 transition-all duration-1000 opacity-100 translate-y-0">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-60" data-alt="A powerful, cinematic photograph of a majestic lion, evocative of raw power and passion, matching the Obsidian &amp; Gold aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCN7E5ndpNmqN4FgORGKwK_g6EsaT0MAJpX9ABxe4eX1uewRbUEO1QjRXt-cZ9RW0rj2F3kebMA6QUyAcDVdrVT8eOMoPyguD-KBeBFGz9L_i83Ys59mWzc7S2P7yMRRhxaE7E5v1VjhH0YOTXMItgYpm3Qss88id-y0dOiN9L96inmRQtEI8BSsA8s6PVzI16g0N8u21FjhRpBw55rKZaGH2QWh4-wJFDn3DvkS_DkJQp7nQ3rHPrcGrk6r_p3PP68RAfEVap9Py5">
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/70"></div>
+</div>
+<div class="relative z-10 text-center px-margin-mobile max-w-4xl">
+<span class="font-button text-primary tracking-[0.3em] uppercase mb-4 block">Энергия Близости</span>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-8">Искусство сексуального здоровья</h1>
+<p class="text-on-surface-variant text-lg md:text-xl max-w-2xl mx-auto font-body-md">Синергия органических нутриентов для раскрытия вашей истинной потенции и чувственности. БакиБар — это топливо для тех, кто ценит глубину и качество каждого момента.</p>
+<div class="mt-12">
+<a href="catalog.html" class="bg-primary text-on-primary font-button px-12 py-5 rounded-none hover:bg-primary/90 transition-all uppercase tracking-widest inline-block">Исследовать коллекцию</a>
+</div>
+</div>
+</section>
+<!-- Libido & Desire Section (Ingredients) -->
+<section class="py-section-padding px-margin-mobile md:px-gutter max-w-container-max mx-auto transition-all duration-1000 opacity-100 translate-y-0">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-stack-lg items-center">
+<div class="lg:col-span-5 order-2 lg:order-1">
+<h2 class="font-headline-md text-headline-md text-primary mb-6">Либидо и Желание</h2>
+<p class="text-on-surface-variant mb-8 text-lg">
+                    Сексуальное влечение начинается с чистого источника энергии. Мы объединили макадамию, миндаль и натуральные жиры, чтобы обеспечить стабильный гормональный фон и неугасающий драйв.
+                </p>
+<div class="space-y-6">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary mt-1" style="font-variation-settings: 'FILL' 1;">bolt</span>
+<div>
+<h4 class="font-bold text-on-surface">Макадамия и Миндаль</h4>
+<p class="text-sm text-on-surface-variant">Богатые мононенасыщенными жирами, они поддерживают кровообращение, необходимое для остроты ощущений.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary mt-1" style="font-variation-settings: 'FILL' 1;">favorite</span>
+<div>
+<h4 class="font-bold text-on-surface">Паста Амосова</h4>
+<p class="text-sm text-on-surface-variant">Концентрат витаминов и антиоксидантов для укрепления сердечно-сосудистой системы — фундамента выносливости.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-7 order-1 lg:order-2 grid grid-cols-2 gap-4">
+<div class="pt-12">
+<img class="w-full aspect-[3/4] object-cover grayscale hover:grayscale-0 transition-all duration-700 rounded-lg" data-alt="Close up of premium macadamia nuts on dark surface." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3dPLdPqIM-mASeMO_Q_7n2Zj-TLEr_QyREGf2wBXjagElLYJ8hYDV_TEZeVkA8HK2KHBQQAOXT__EToonk3OW8e3NXFz7MOcyp6pmW7xp4f5_efW-Ne8_XoMQBVgkYDaNkEcitp2Smdnmr_OBoWXhdM20hZBmeA9_wYcWgwmpKS0vCzu1yft8saxcHHPThIxtrCUng5ZYqYrUqa0i0WKe7kdCPld2hYiysrvmf-q2asyAhtBnGC9WUH0BxMJ9yTo3SFZoBxOFMspf">
+</div>
+<div>
+<img class="w-full aspect-[3/4] object-cover grayscale hover:grayscale-0 transition-all duration-700 rounded-lg" data-alt="Artistic shot of almonds and chocolate on dark background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6MatD9uJNsypeEPdn6-_ct4HTmC3br8kzCPuzGvdgHBqz8J2_Dnit3iY6ggjqzto5XKMDXv-z1uHe8gwnbsUOAuJg2ntLQGz0c-acOm5z6rdj5o9eK0NJ58vfdfWGYDXSI-PRd7XADYkXABQOf89nIL5qKaLgDcW7uv0WTCAwFJ86ipBeRrXh3oBL05V0-yCpT_wQktF5H53nztN8hu1qsPQbCsr1ZCNjoZaS-55ARG1irYftcSzwnceELE43X9eEGrewbg6uvFHw">
+</div>
+</div>
+</div>
+</section>
+<!-- Health Focus (Bento Grid) -->
+<section class="py-section-padding bg-surface-container-lowest transition-all duration-1000 opacity-100 translate-y-0">
+<div class="px-margin-mobile md:px-gutter max-w-container-max mx-auto">
+<div class="text-center mb-16">
+<h2 class="font-headline-md text-headline-md text-on-surface">Индивидуальная синергия</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Men's Health -->
+<div class="md:col-span-7 glass-card p-10 flex flex-col justify-between min-h-[400px] border border-primary/20">
+<div>
+<div class="flex justify-between items-start mb-6">
+<span class="font-button text-primary border border-primary/30 px-3 py-1 text-xs">Men's Health</span>
+<span class="material-symbols-outlined text-primary text-4xl">shield_with_heart</span>
+</div>
+<h3 class="font-headline-md text-3xl mb-4 text-on-surface">Мужская сила и Потенция</h3>
+<p class="text-on-surface-variant mb-6 max-w-md">
+                            Тыквенные семечки и фисташки — естественные источники цинка и L-аргинина. Эти элементы критически важны для синтеза тестостерона и поддержания высокого уровня сексуальной энергии.
+                        </p>
+</div>
+<ul class="flex flex-wrap gap-3">
+<li class="bg-primary/10 text-primary border border-primary/20 px-4 py-2 text-xs font-bold tracking-wider uppercase">Цинк</li>
+<li class="bg-primary/10 text-primary border border-primary/20 px-4 py-2 text-xs font-bold tracking-wider uppercase">L-Аргинин</li>
+<li class="bg-primary/10 text-primary border border-primary/20 px-4 py-2 text-xs font-bold tracking-wider uppercase">Выносливость</li>
+</ul>
+</div>
+<!-- Women's Health -->
+<div class="md:col-span-5 border border-outline-variant/20 p-10 flex flex-col justify-between min-h-[400px] relative overflow-hidden group rounded-lg">
+<div class="absolute inset-0 opacity-10 group-hover:opacity-20 transition-opacity">
+<img class="w-full h-full object-cover" data-alt="Luxury shot of green pistachios." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxz2oJ4nKAmAE0u9YX4CjmW5yVZk5WL6XqYJHF6F8PwX3g6H-X9jA2wNYfbfSCWgt5znz8fz7BTuMo_x25rmuzgXGUXXZFVeOpIRTAjiuTVTG5dKte8rTCXIfxtxa6GxvVt8lNZEVEWpuYgAQq9M-f7SePnXZ6kQ5IZofxSwRG5URkokF4gH55-DZs8uz588iKj0ecjOKtkZTTZMuHRx2rhJXSPjqdZ1awiC4hw6_28Za720nSGivG91UQ9q8WW8RwvtWky4I5GclH">
+</div>
+<div class="relative z-10">
+<span class="font-button text-secondary border border-secondary/30 px-3 py-1 text-xs mb-6 inline-block">Women's Health</span>
+<h3 class="font-headline-md text-3xl mb-4 text-on-surface">Гормональный баланс</h3>
+<p class="text-on-surface-variant mb-6">
+                            Марципан и отборные орехи богаты витамином Е и магнием, которые способствуют расслаблению и усиливают сенсорное восприятие, гармонизируя женский цикл и либидо.
+                        </p>
+</div>
+<div class="relative z-10 flex items-center gap-2 text-secondary">
+<span class="material-symbols-outlined">auto_awesome</span>
+<span class="font-button uppercase text-xs tracking-tighter">Сенсорная Энергия</span>
+</div>
+</div>
+<!-- Recovery Card -->
+<div class="md:col-span-12 glass-card p-12 flex flex-col md:flex-row items-center gap-12 border-primary/20">
+<div class="md:w-1/2">
+<h3 class="font-headline-md text-3xl mb-6 text-on-surface">Быстрое восстановление</h3>
+<p class="text-on-surface-variant text-lg leading-relaxed">
+                            Интенсивная близость требует ресурса. БакиБар обеспечивает мгновенное пополнение гликогена и аминокислот, позволяя организму восстановиться в кратчайшие сроки после физической активности.
+                        </p>
+<div class="mt-8 flex gap-8">
+<div class="text-center">
+<div class="text-primary font-display-lg text-4xl mb-1">0%</div>
+<div class="text-xs uppercase tracking-widest text-on-surface-variant">Сахара</div>
+</div>
+<div class="text-center">
+<div class="text-primary font-display-lg text-4xl mb-1">100%</div>
+<div class="text-xs uppercase tracking-widest text-on-surface-variant">Органики</div>
+</div>
+</div>
+</div>
+<div class="md:w-1/2 relative h-64 w-full overflow-hidden rounded-lg">
+<img class="w-full h-full object-cover" data-alt="Macro shot of dark chocolate pieces with nuts." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmY6NhNOJ6M1RQ_B1VNKbiPTaxQEAgJT2t26VSjWKNGEGJnI5rwChAeAEgeYz3aPlhXXEt4ZDrEkGLMYvUOXDigIxrWGlS3GOmdPNg3yxoDK7O09NCghxXnpI3xWGWnYcoeJZ_ztQWwEn6JJ-ZUtRNHrbYW5n3bAjR-anThvp2h40aFqq8nwgqiLYdOnXsIqoDSbnzUJbCs76MAagdPWYZebVu9HbuX5rwGL06lyO0lqxylMi3sLg3-r8Qmx_-6gdrHKNJYtEL9IJc">
+</div>
+</div>
+</div>
+</div>
+</section><section class="py-section-padding px-margin-mobile relative overflow-hidden transition-all duration-1000 opacity-100 translate-y-0">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-b from-surface-container-lowest via-background to-background"></div>
+</div>
+<div class="relative z-10 max-w-4xl mx-auto text-center">
+<div class="flex justify-center mb-8">
+<div class="h-px w-24 bg-primary/30 self-center"></div>
+<span class="material-symbols-outlined text-primary mx-6 text-3xl">nature_people</span>
+<div class="h-px w-24 bg-primary/30 self-center"></div>
+</div>
+<h2 class="font-display-lg text-3xl md:text-5xl text-on-surface mb-10 leading-tight">
+            Достигайте результатов без лекарств и синтетических добавок
+        </h2>
+<div class="space-y-6 max-w-3xl mx-auto">
+<p class="font-body-lg text-lg md:text-xl text-on-surface-variant leading-relaxed">
+                Мы берем энергию и силу напрямую из природы. Природа против воспитания — и природа всегда побеждает. Мы извлекаем из нее все самое полезное и направляем точно в цель.
+            </p>
+<p class="font-label-caps text-primary tracking-[0.4em] uppercase text-sm pt-4">Чистая энергия БакиБар</p>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-section-padding px-margin-mobile text-center transition-all duration-1000 opacity-100 translate-y-0">
+<div class="max-w-2xl mx-auto border-t border-b border-outline-variant/30 py-20">
+<h2 class="font-headline-md text-headline-md mb-8">Готовы к новому уровню энергии?</h2>
+<p class="text-on-surface-variant mb-12 italic text-lg">"Еда как искусство. Здоровье как привилегия."</p>
+<div class="flex flex-col sm:flex-row justify-center gap-6">
+<a href="catalog.html" class="bg-primary text-on-primary font-button px-10 py-4 uppercase tracking-widest hover:bg-primary/90 transition-all inline-block">Перейти в каталог</a>
+<a href="about.html" class="border border-primary text-primary font-button px-10 py-4 uppercase tracking-widest hover:bg-primary/5 transition-all inline-block">Узнать больше о составах</a>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="w-full py-section-padding px-margin-mobile md:px-gutter max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-start gap-stack-md">
+<div class="max-w-xs">
+<div class="font-display-lg text-headline-md text-primary mb-6">БакиБар</div>
+<p class="text-on-surface-variant font-body-md mb-8 text-sm leading-relaxed">Элитные энергетические батончики для тех, кто не согласен на компромиссы в вопросах здоровья и удовольствия. Dark Luxury Health.</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-16">
+<div>
+<h5 class="text-primary font-bold mb-6 uppercase text-xs tracking-widest">Меню</h5>
+<ul class="space-y-4 font-body-md text-on-surface-variant">
+<li class=""><a class="hover:text-primary transition-colors" href="index.html">Главная</a></li>
+<li class=""><a class="hover:text-primary transition-colors" href="catalog.html">Каталог</a></li>
+<li class=""><a class="hover:text-primary transition-colors" href="about.html">О бренде</a></li>
+<li class=""><a class="hover:text-primary transition-colors" href="b2b.html">B2B/Инвесторам</a></li>
+<li class=""><a class="text-primary" href="sex.html">Секс</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-primary font-bold mb-6 uppercase text-xs tracking-widest">Контакты</h5>
+<ul class="space-y-4 font-body-md text-on-surface-variant">
+<li class=""><a class="hover:text-white transition-colors flex items-center gap-3" href="index.html">
+<span class="material-symbols-outlined text-[20px] text-primary">phone</span>
+                        +79264500383
+                    </a></li>
+<li class=""><a class="hover:text-white transition-colors flex items-center gap-3" href="catalog.html">
+<span class="material-symbols-outlined text-[20px] text-primary">mail</span>
+                        bakibar@bk.ru
+                    </a></li>
+<li class=""><a class="hover:text-white transition-colors flex items-center gap-3" href="about.html">
+<span class="material-symbols-outlined text-[20px] text-primary">alternate_email</span>
+                        @bakibar_
+                    </a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter pb-12">
+<div class="border-t border-outline-variant/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-on-surface-variant text-sm text-center md:text-left">© 2026 БакиБар. Самара. Все права защищены. Dark Luxury Health.</p>
+<div class="flex gap-6">
+<span class="material-symbols-outlined text-primary cursor-pointer hover:opacity-70">share</span>
+<span class="material-symbols-outlined text-primary cursor-pointer hover:opacity-70">language</span>
+</div>
+</div>
+</div>
+</footer>
+<script>
+    // Smooth scroll micro-interaction
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+
+    // Simple Fade In on Scroll
+    const observerOptions = {
+        threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('opacity-100', 'translate-y-0');
+                entry.target.classList.remove('opacity-0', 'translate-y-10');
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('section').forEach(section => {
+        section.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+        observer.observe(section);
+    });
+</script>
+
+
+</body></html>
